@@ -14,6 +14,7 @@ Options for crawl:
   --pairs matrix    every ordered pair among the cities of the 2025 table (large)
   --origin HGH      only pairs leaving this IATA city code (combine with --pairs)
   --dest PEK        only pairs arriving at this IATA city code
+  --pair HGH-DLC,HGH-HRB   query exactly these pairs (IATA city/airport codes) instead of the seed list
   --limit N         stop after N new queries
   --delay SECONDS   pause between queries (default 0.8)
   --refresh         re-query pairs that already have a result in rows.jsonl
@@ -239,7 +240,13 @@ def main(argv):
         print(f'{len(cities)} domestic cities saved')
         return
     cities = load_cities()
-    pairs = seed_pairs(cities, opts.get('--pairs', '2025'))
+    if '--pair' in opts:
+        by_iata = {}
+        for c in cities:
+            by_iata.setdefault(c['iata'], c)
+        pairs = [(by_iata[a], by_iata[b]) for a, b in (x.split('-') for x in opts['--pair'].split(','))]
+    else:
+        pairs = seed_pairs(cities, opts.get('--pairs', '2025'))
     if '--origin' in opts:
         pairs = [p for p in pairs if p[0]['iata'] == opts['--origin']]
     if '--dest' in opts:
