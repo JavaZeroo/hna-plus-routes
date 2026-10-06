@@ -8,6 +8,17 @@
 | 2025 全国历史参考表 | [海航 PLUS 会员权益卡适用航班参考列表](https://m.hnair.com/cms/me/plus/info/202508/t20250808_78914.html) | 完整导入表内1692条记录、11航司、983单向机场对。表页标注更新至2025-10-29，“即日起—12月25日”。不是2026当前计划，也不是全时段全国班表。 |
 | 权益规则 | [海航 PLUS 官方使用规则](https://m.hnair.com/cms/me/plus/info/202505/t20250519_76300.html) | 按官方规则筛选时间窗；时刻筛选结果不保证实际执飞或出票资格。 |
 
+## 官方航班时刻表抓取（new.hnair.com）
+
+海航官网「[航班时刻表](https://new.hnair.com/hainanair/ibe/common/flightSchedule.do)」无需登录，按城市对返回航班号、起降时刻、班期和分段生效区间，集团各航司（HU、GS、JD、8L、PN、GX、FU、UQ、9H、Y8、CN）在同一个库里。`scripts/crawl-official-timetable.py` 直接使用页面自身的表单接口和地点数据库，不绕过任何验证。
+
+- `python scripts/crawl-official-timetable.py cities`：从官网地点库枚举国内城市与机场，写入 `data/official/timetable/cities.json`（含官网地点 ID、中文名、IATA）。
+- `python scripts/crawl-official-timetable.py crawl`：默认遍历 2025 官方参考表出现过的城市对（双向，约 1400 对），每对一次查询，结果逐行追加到 `data/official/timetable/rows.jsonl`，可中断续跑；`--pairs matrix` 遍历表内城市的全部有序组合（约 2.5 万对）；`--origin HGH`、`--dest PEK`、`--limit N`、`--refresh` 控制范围。
+- `python scripts/crawl-official-timetable.py summary`：统计已抓取的记录。
+- 每条记录保留页面原文：机场对、航班号、航司 logo 代码、起飞/到达时间、周一至周日运行标记、生效时段文本，以及查询时间。查询返回的结果块原样缓存到 `data/official/timetable/raw/`（不入库）。
+- 页面提示“此航班时刻表仅供参考，如遇航班调整，请以实际执行时间为准”。时刻表不含权益卡标注；2025 官方参考表 1692 条记录的“2666 / 666/2666”标注全部可由起飞时刻推出（08:00–09:00、19:00–20:00 起飞为 2666 独享，其余权益时段为两档共有），因此权益判断在本地按官方规则进行。
+- 官网地点库没有“长治”，该城市的城市对未查询；“茅台”“那拉提”“香格里拉”“达州”分别按官网的“遵义”“新源”“迪庆”“达州金垭（机场）”查询。
+
 ## 为什么目前还不是最新全国全量
 
 官方H5“全部航班”要求同时选择出发地和到达地；权益卡模式可以只选出发城市。公开网页没有提供全国一键导出。直接调用对应接口返回“验签错误”，本项目没有绕过验证、保存凭据或复制签名。另查到的官方下载班表有历史年份，不能冒充当前计划。当前尚未取得覆盖11家适用航司的最新全国全时段表。

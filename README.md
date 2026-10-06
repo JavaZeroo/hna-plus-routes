@@ -25,6 +25,6 @@ npm run build
 
 ## 官方数据更新
 
-`src/assets/flights.json`保存标准化官方记录；`data/official/`保存可复核原始文本；`scripts/import-official.py`负责转换。增加官方当前计划时必须保存查询城市、类型、日期及来源，更新界面覆盖说明，并进行时间边界与历史数据隔离验证。不要用第三方班表补全。
+`src/assets/flights.json`保存标准化官方记录；`data/official/`保存可复核原始文本；`scripts/import-official.py`负责转换。`scripts/crawl-official-timetable.py`按城市对抓取海航官网公开「航班时刻表」，结果写入`data/official/timetable/`（见[DATA_SOURCES.md](DATA_SOURCES.md)）。增加官方当前计划时必须保存查询城市、类型、日期及来源，更新界面覆盖说明，并进行时间边界与历史数据隔离验证。不要用第三方班表补全。
 
 完整范围、官方查询限制、转换规则、地图辅助来源及许可见[DATA_SOURCES.md](DATA_SOURCES.md)。原创代码MIT；官方内容、底图和依赖遵循各自条款。

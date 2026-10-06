@@ -1,0 +1,4692 @@
+[
+{
+"id": "CITY_AAT_CN",
+"type": "city",
+"iata": "AAT",
+"name": "阿勒泰",
+"name_traditional": "阿勒泰",
+"name_en": "ALETAI",
+"lat": 47.83842086791992,
+"lng": 88.12481689453125
+},
+{
+"id": "CitCnALAER046",
+"type": "city",
+"iata": "ACF",
+"name": "阿拉尔",
+"name_traditional": "阿拉爾",
+"name_en": "ALAER",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnXINGYI193",
+"type": "city",
+"iata": "ACX",
+"name": "兴义",
+"name_traditional": "興義",
+"name_en": "XINGYI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnBAISE045",
+"type": "city",
+"iata": "AEB",
+"name": "百色",
+"name_traditional": "百色",
+"name_en": "BAISE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnAba821",
+"type": "city",
+"iata": "AHJ",
+"name": "阿坝",
+"name_traditional": "阿壩",
+"name_en": "Aba",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_AKA_CN",
+"type": "city",
+"iata": "AKA",
+"name": "安康",
+"name_traditional": "安康",
+"name_en": "ANKANG",
+"lat": 32.68478012084961,
+"lng": 109.02930450439453
+},
+{
+"id": "CITY_AKU_CN",
+"type": "city",
+"iata": "AKU",
+"name": "阿克苏",
+"name_traditional": "阿克蘇",
+"name_en": "AKSU",
+"lat": 41.12392044067383,
+"lng": 80.2445297241211
+},
+{
+"id": "CitCnANSHAN162",
+"type": "city",
+"iata": "AOG",
+"name": "鞍山",
+"name_traditional": null,
+"name_en": "ANSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_AQG_CN",
+"type": "city",
+"iata": "AQG",
+"name": "安庆",
+"name_traditional": "安慶",
+"name_en": "ANQING",
+"lat": 30.598237991333008,
+"lng": 117.11005401611328
+},
+{
+"id": "CitCnANSHUN182",
+"type": "city",
+"iata": "AVA",
+"name": "安顺",
+"name_traditional": "安順",
+"name_en": "ANSHUN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitALASHANZU616",
+"type": "city",
+"iata": "AXF",
+"name": "阿拉善左旗",
+"name_traditional": null,
+"name_en": "ALASHANZUOQI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnANYANG167",
+"type": "city",
+"iata": "AYN",
+"name": "安阳",
+"name_traditional": null,
+"name_en": "ANYANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnBOAO946",
+"type": "city",
+"iata": "BAR",
+"name": "琼海",
+"name_traditional": "瓊海",
+"name_en": "QIONGHAI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_BAV_CN",
+"type": "city",
+"iata": "BAV",
+"name": "包头",
+"name_traditional": "包頭",
+"name_en": "BAOTOU",
+"lat": 40.64286804199219,
+"lng": 109.93003845214844
+},
+{
+"id": "CitBIJIE835",
+"type": "city",
+"iata": "BFJ",
+"name": "毕节",
+"name_traditional": null,
+"name_en": "BIJIE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnBENGBU156",
+"type": "city",
+"iata": "BFU",
+"name": "蚌埠",
+"name_traditional": "蚌埠",
+"name_en": "BENGBU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_BHY_CN",
+"type": "city",
+"iata": "BHY",
+"name": "北海",
+"name_traditional": "北海",
+"name_en": "BEIHAI",
+"lat": 21.533748626708984,
+"lng": 109.32100677490234
+},
+{
+"id": "CITY_BJS_CN",
+"type": "city",
+"iata": "BJS",
+"name": "北京",
+"name_traditional": "北京",
+"name_en": "BEIJING",
+"lat": 39.908172607421875,
+"lng": 116.39794921875
+},
+{
+"id": "CitCnQINHUAN507",
+"type": "city",
+"iata": "BPE",
+"name": "秦皇岛",
+"name_traditional": "秦皇島（北戴河）",
+"name_en": "QINGHUANGDAO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitBOLE738",
+"type": "city",
+"iata": "BPL",
+"name": "博乐",
+"name_traditional": null,
+"name_en": "BOLE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCHANGDU050",
+"type": "city",
+"iata": "BPX",
+"name": "昌都",
+"name_traditional": "昌都",
+"name_en": "CHANGDU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitBAOSHAN052",
+"type": "city",
+"iata": "BSD",
+"name": "保山",
+"name_traditional": "保山",
+"name_en": "BAOSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnBOZHOU192",
+"type": "city",
+"iata": "BZJ",
+"name": "亳州",
+"name_traditional": null,
+"name_en": "BOZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitBAZHONG065",
+"type": "city",
+"iata": "BZX",
+"name": "巴中",
+"name_traditional": null,
+"name_en": "BAZHONG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_CAN_CN",
+"type": "city",
+"iata": "CAN",
+"name": "广州",
+"name_traditional": "廣州",
+"name_en": "GUANGZHOU",
+"lat": 23.12704086303711,
+"lng": 113.3415298461914
+},
+{
+"id": "CITY_CGD_CN",
+"type": "city",
+"iata": "CGD",
+"name": "常德",
+"name_traditional": "常德",
+"name_en": "CHANGDE",
+"lat": 29.043498992919922,
+"lng": 111.69914245605469
+},
+{
+"id": "CITY_CGO_CN",
+"type": "city",
+"iata": "CGO",
+"name": "郑州",
+"name_traditional": "鄭州",
+"name_en": "ZHENGZHOU",
+"lat": 34.78037643432617,
+"lng": 113.65821838378906
+},
+{
+"id": "CITY_CGQ_CN",
+"type": "city",
+"iata": "CGQ",
+"name": "长春",
+"name_traditional": "長春",
+"name_en": "CHANGCHUN",
+"lat": 43.88685989379883,
+"lng": 125.32479095458984
+},
+{
+"id": "CitCnCHAOYAN371",
+"type": "city",
+"iata": "CHG",
+"name": "朝阳",
+"name_traditional": "朝陽",
+"name_en": "CHAOYANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_CIF_CN",
+"type": "city",
+"iata": "CIF",
+"name": "赤峰",
+"name_traditional": "赤峰",
+"name_en": "CHIFENG",
+"lat": 42.290382385253906,
+"lng": 118.9847412109375
+},
+{
+"id": "CITY_CKG_CN",
+"type": "city",
+"iata": "CKG",
+"name": "重庆",
+"name_traditional": "重慶",
+"name_en": "CHONGQING",
+"lat": 29.554899215698242,
+"lng": 106.5479965209961
+},
+{
+"id": "CitCnWULONG197",
+"type": "city",
+"iata": "CQW",
+"name": "武隆",
+"name_traditional": "武隆",
+"name_en": "WULONG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCHANGSHA149",
+"type": "city",
+"iata": "CSX",
+"name": "长沙",
+"name_traditional": "長沙",
+"name_en": "CHANGSHA",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_CTU_CN",
+"type": "city",
+"iata": "CTU",
+"name": "成都",
+"name_traditional": "成都",
+"name_en": "CHENGDU",
+"lat": 30.710588455200195,
+"lng": 104.08866882324219
+},
+{
+"id": "CitCANGYUAN174",
+"type": "city",
+"iata": "CWJ",
+"name": "沧源",
+"name_traditional": "滄源",
+"name_en": "CANGYUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnCHANGZH496",
+"type": "city",
+"iata": "CZX",
+"name": "常州",
+"name_traditional": "常州",
+"name_en": "CHANGZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_DAT_CN",
+"type": "city",
+"iata": "DAT",
+"name": "大同",
+"name_traditional": "大同",
+"name_en": "dt",
+"lat": 40.05577850341797,
+"lng": 113.22662353515625
+},
+{
+"id": "CitCnDAOCHEN354",
+"type": "city",
+"iata": "DCY",
+"name": "稻城",
+"name_traditional": "稻城",
+"name_en": "DAOCHENG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_DIG_CN",
+"type": "city",
+"iata": "DIG",
+"name": "迪庆",
+"name_traditional": "迪慶",
+"name_en": "DIQING",
+"lat": 27.789722442626953,
+"lng": 99.67778015136719
+},
+{
+"id": "CITY_DLC_CN",
+"type": "city",
+"iata": "DLC",
+"name": "大连",
+"name_traditional": "大連",
+"name_en": "DALIAN",
+"lat": 38.91450119018555,
+"lng": 121.61599731445312
+},
+{
+"id": "CITY_DLU_CN",
+"type": "city",
+"iata": "DLU",
+"name": "大理",
+"name_traditional": "大理",
+"name_en": "DALI",
+"lat": 25.5842342376709,
+"lng": 100.22212219238281
+},
+{
+"id": "CITY_DNH_CN",
+"type": "city",
+"iata": "DNH",
+"name": "敦煌",
+"name_traditional": "敦煌",
+"name_en": "DUNHUANG",
+"lat": 40.13727951049805,
+"lng": 94.6633529663086
+},
+{
+"id": "CITY_DOY_CN",
+"type": "city",
+"iata": "DOY",
+"name": "东营",
+"name_traditional": "東營",
+"name_en": "DONGYING",
+"lat": 37.518333435058594,
+"lng": 118.78778076171875
+},
+{
+"id": "CitCnEERDUOS393",
+"type": "city",
+"iata": "DSN",
+"name": "鄂尔多斯",
+"name_traditional": "鄂爾多斯",
+"name_en": "EERDUOSI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnXIANGXI289",
+"type": "city",
+"iata": "DXJ",
+"name": "湘西",
+"name_traditional": "湘西",
+"name_en": "XIANGXI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnZHANGJI685",
+"type": "city",
+"iata": "DYG",
+"name": "张家界",
+"name_traditional": "張家界",
+"name_en": "ZHANGJIAJIE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnEZHOU084",
+"type": "city",
+"iata": "EHU",
+"name": "鄂州",
+"name_traditional": "鄂州",
+"name_en": "EZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_ENH_CN",
+"type": "city",
+"iata": "ENH",
+"name": "恩施",
+"name_traditional": "恩施",
+"name_en": "ENSHI",
+"lat": 30.2899227142334,
+"lng": 109.48234558105469
+},
+{
+"id": "CITY_ENY_CN",
+"type": "city",
+"iata": "ENY",
+"name": "延安",
+"name_traditional": "延安",
+"name_en": "YANAN",
+"lat": 36.58542251586914,
+"lng": 109.48963928222656
+},
+{
+"id": "CitERLIANHAO484",
+"type": "city",
+"iata": "ERL",
+"name": "二连浩特",
+"name_traditional": null,
+"name_en": "ERLIANHAOTE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_FOC_CN",
+"type": "city",
+"iata": "FOC",
+"name": "福州",
+"name_traditional": "福州",
+"name_en": "FUZHOU",
+"lat": 26.076107025146484,
+"lng": 119.30640411376953
+},
+{
+"id": "CITY_FUG_CN",
+"type": "city",
+"iata": "FUG",
+"name": "阜阳",
+"name_traditional": "阜陽",
+"name_en": "FUYANG",
+"lat": 32.90825271606445,
+"lng": 115.82682037353516
+},
+{
+"id": "CitCnFoshan168",
+"type": "city",
+"iata": "FUO",
+"name": "佛山",
+"name_traditional": "佛山",
+"name_en": "Foshan",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnFuyuan193",
+"type": "city",
+"iata": "FYJ",
+"name": "抚远",
+"name_traditional": "撫遠",
+"name_en": "Fuyuan",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnFUYUN096",
+"type": "city",
+"iata": "FYN",
+"name": "富蕴",
+"name_traditional": "富蘊",
+"name_en": "FUYUN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnGEERMU174",
+"type": "city",
+"iata": "GOQ",
+"name": "格尔木",
+"name_traditional": "格爾木",
+"name_en": "GEERMU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnGUANGYU504",
+"type": "city",
+"iata": "GYS",
+"name": "广元",
+"name_traditional": "廣元",
+"name_en": "GUANGYUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnGUYUAN194",
+"type": "city",
+"iata": "GYU",
+"name": "固原",
+"name_traditional": "固原",
+"name_en": "GUYUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnGanzi066",
+"type": "city",
+"iata": "GZG",
+"name": "甘孜",
+"name_traditional": "甘孜",
+"name_en": "Ganzi",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_HAK_CN",
+"type": "city",
+"iata": "HAK",
+"name": "海口",
+"name_traditional": "海口",
+"name_en": "HAIKOU",
+"lat": 20.015844345092773,
+"lng": 110.33118438720703
+},
+{
+"id": "poiHECHI841",
+"type": "city",
+"iata": "HCJ",
+"name": "河池",
+"name_traditional": "河池",
+"name_en": "HECHI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnHANDAN147",
+"type": "city",
+"iata": "HDG",
+"name": "邯郸",
+"name_traditional": "邯鄲",
+"name_en": "HANDAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_HET_CN",
+"type": "city",
+"iata": "HET",
+"name": "呼和浩特",
+"name_traditional": "呼和浩特",
+"name_en": "HUHEHAOTE",
+"lat": 40.86723327636719,
+"lng": 111.8145523071289
+},
+{
+"id": "CITY_HFE_CN",
+"type": "city",
+"iata": "HFE",
+"name": "合肥",
+"name_traditional": "合肥",
+"name_en": "HEFEI",
+"lat": 31.795642852783203,
+"lng": 117.25914764404297
+},
+{
+"id": "CITY_HGH_CN",
+"type": "city",
+"iata": "HGH",
+"name": "杭州",
+"name_traditional": "杭州",
+"name_en": "HANGZHOU",
+"lat": 30.273977279663086,
+"lng": 120.1729736328125
+},
+{
+"id": "CitHUAIAN950",
+"type": "city",
+"iata": "HIA",
+"name": "淮安",
+"name_traditional": "淮安",
+"name_en": "HUAIAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnHUAIHUA270",
+"type": "city",
+"iata": "HJJ",
+"name": "怀化",
+"name_traditional": "懷化",
+"name_en": "HUAIHUA",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_HLD_CN",
+"type": "city",
+"iata": "HLD",
+"name": "呼伦贝尔",
+"name_traditional": "呼倫貝爾",
+"name_en": "HULUNBEIER",
+"lat": 49.21152877807617,
+"lng": 119.73056030273438
+},
+{
+"id": "CITY_HLH_CN",
+"type": "city",
+"iata": "HLH",
+"name": "乌兰浩特",
+"name_traditional": "烏蘭浩特",
+"name_en": "WULANHAOTE",
+"lat": 46.06874084472656,
+"lng": 122.0635986328125
+},
+{
+"id": "CITY_HMI_CN",
+"type": "city",
+"iata": "HMI",
+"name": "哈密",
+"name_traditional": "哈密",
+"name_en": "HAMI",
+"lat": 42.8385009765625,
+"lng": 93.50438690185547
+},
+{
+"id": "CitCnHENGYAN378",
+"type": "city",
+"iata": "HNY",
+"name": "衡阳",
+"name_traditional": "衡陽",
+"name_en": "HENGYANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnShennon701",
+"type": "city",
+"iata": "HPG",
+"name": "神农架",
+"name_traditional": "神農架",
+"name_en": "Shennongjia",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_HRB_CN",
+"type": "city",
+"iata": "HRB",
+"name": "哈尔滨",
+"name_traditional": "哈爾濱",
+"name_en": "HAERBIN",
+"lat": 45.973419189453125,
+"lng": 126.72378540039062
+},
+{
+"id": "CitCnSHAOGUA383",
+"type": "city",
+"iata": "HSC",
+"name": "韶关",
+"name_traditional": "韶關",
+"name_en": "SHAOGUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnZHOUSHA409",
+"type": "city",
+"iata": "HSN",
+"name": "舟山",
+"name_traditional": "舟山",
+"name_en": "ZHOUSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_HTN_CN",
+"type": "city",
+"iata": "HTN",
+"name": "和田",
+"name_traditional": "和田",
+"name_en": "HETIAN",
+"lat": 37.229644775390625,
+"lng": 79.76407623291016
+},
+{
+"id": "CitCnHUOLING724",
+"type": "city",
+"iata": "HUO",
+"name": "霍林郭勒",
+"name_traditional": "霍林郭勒",
+"name_en": "HUOLINGUOLE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitHUIZHOU100",
+"type": "city",
+"iata": "HUZ",
+"name": "惠州",
+"name_traditional": null,
+"name_en": "HUIZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnHaixi060",
+"type": "city",
+"iata": "HXD",
+"name": "海西",
+"name_traditional": "海西",
+"name_en": "Haixi",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnTAIZHOU301",
+"type": "city",
+"iata": "HYN",
+"name": "台州",
+"name_traditional": "台州",
+"name_en": "TAIZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitHEZE748",
+"type": "city",
+"iata": "HZA",
+"name": "菏泽",
+"name_traditional": "菏泽",
+"name_en": "HEZE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_HZG_CN",
+"type": "city",
+"iata": "HZG",
+"name": "汉中",
+"name_traditional": "漢中",
+"name_en": "HANZHONG",
+"lat": 33.06791687011719,
+"lng": 107.02332305908203
+},
+{
+"id": "CITY_INC_CN",
+"type": "city",
+"iata": "INC",
+"name": "银川",
+"name_traditional": "銀川",
+"name_en": "YINCHUAN",
+"lat": 38.47511291503906,
+"lng": 106.27323913574219
+},
+{
+"id": "CITY_IQN_CN",
+"type": "city",
+"iata": "IQN",
+"name": "庆阳",
+"name_traditional": "慶陽",
+"name_en": "QINGYANG",
+"lat": 33.45505142211914,
+"lng": 118.20490264892578
+},
+{
+"id": "CitCnQITAI065",
+"type": "city",
+"iata": "JBK",
+"name": "奇台",
+"name_traditional": null,
+"name_en": "QITAI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_JDZ_CN",
+"type": "city",
+"iata": "JDZ",
+"name": "景德镇",
+"name_traditional": "景德鎮",
+"name_en": "JINGDEZHEN",
+"lat": 29.234554290771484,
+"lng": 117.14449310302734
+},
+{
+"id": "CitCnJIAGEDA456",
+"type": "city",
+"iata": "JGD",
+"name": "加格达奇",
+"name_traditional": "加格達奇",
+"name_en": "JIAGEDAQI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnJIAYUGU502",
+"type": "city",
+"iata": "JGN",
+"name": "嘉峪关",
+"name_traditional": "嘉峪关",
+"name_en": "JIAYUGUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitJINGGANGS583",
+"type": "city",
+"iata": "JGS",
+"name": "井冈山",
+"name_traditional": null,
+"name_en": "JINGGANGSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_JHG_CN",
+"type": "city",
+"iata": "JHG",
+"name": "西双版纳",
+"name_traditional": "西雙版納",
+"name_en": "XISHUANGBANNA",
+"lat": 22.01268196105957,
+"lng": 100.7935562133789
+},
+{
+"id": "CitCnJINCHAN363",
+"type": "city",
+"iata": "JIC",
+"name": "金昌",
+"name_traditional": null,
+"name_en": "JINCHANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitQIANJIANG266",
+"type": "city",
+"iata": "JIQ",
+"name": "黔江",
+"name_traditional": null,
+"name_en": "QIANJIANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_JIU_CN",
+"type": "city",
+"iata": "JIU",
+"name": "九江",
+"name_traditional": "九江",
+"name_en": "JIUJIANG",
+"lat": 29.610149383544922,
+"lng": 115.99810791015625
+},
+{
+"id": "CitCnQUANZHO420",
+"type": "city",
+"iata": "JJN",
+"name": "泉州",
+"name_traditional": "泉州",
+"name_en": "QUANZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitPUERJingM531",
+"type": "city",
+"iata": "JMJ",
+"name": "澜沧",
+"name_traditional": null,
+"name_en": "LANGCANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_JMU_CN",
+"type": "city",
+"iata": "JMU",
+"name": "佳木斯",
+"name_traditional": "佳木斯",
+"name_en": "JIAMUSI",
+"lat": 46.77040100097656,
+"lng": 130.2760009765625
+},
+{
+"id": "CITY_JNG_CN",
+"type": "city",
+"iata": "JNG",
+"name": "济宁",
+"name_traditional": "濟寧",
+"name_en": "JINING",
+"lat": 35.406646728515625,
+"lng": 116.59709930419922
+},
+{
+"id": "CITY_JNZ_CN",
+"type": "city",
+"iata": "JNZ",
+"name": "锦州",
+"name_traditional": "錦州",
+"name_en": "JINZHOU",
+"lat": 39.0930290222168,
+"lng": 121.71690368652344
+},
+{
+"id": "CitCHIZHOU082",
+"type": "city",
+"iata": "JUH",
+"name": "池州",
+"name_traditional": null,
+"name_en": "CHIZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnQuzhou213",
+"type": "city",
+"iata": "JUZ",
+"name": "衢州",
+"name_traditional": "衢州",
+"name_en": "Quzhou",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitJIXI756",
+"type": "city",
+"iata": "JXA",
+"name": "鸡西",
+"name_traditional": "雞西",
+"name_en": "JIXI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnJIUZHAI616",
+"type": "city",
+"iata": "JZH",
+"name": "九寨沟",
+"name_traditional": "九寨溝",
+"name_en": "JIUZHAIGOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_KCA_CN",
+"type": "city",
+"iata": "KCA",
+"name": "库车",
+"name_traditional": "庫車",
+"name_en": "KUCHE",
+"lat": 41.71666717529297,
+"lng": 83
+},
+{
+"id": "CITY_KHG_CN",
+"type": "city",
+"iata": "KHG",
+"name": "喀什",
+"name_traditional": "喀什",
+"name_en": "KASHI",
+"lat": 39.46023178100586,
+"lng": 75.98779296875
+},
+{
+"id": "CITY_KHN_CN",
+"type": "city",
+"iata": "KHN",
+"name": "南昌",
+"name_traditional": "南昌",
+"name_en": "NANCHANG",
+"lat": 28.74677848815918,
+"lng": 115.826904296875
+},
+{
+"id": "CitCnKAILI051",
+"type": "city",
+"iata": "KJH",
+"name": "凯里",
+"name_traditional": "凯里",
+"name_en": "KAILI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnBurqin186",
+"type": "city",
+"iata": "KJI",
+"name": "布尔津",
+"name_traditional": "布爾津",
+"name_en": "Burqin",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnKANASI160",
+"type": "city",
+"iata": "KJI",
+"name": "喀纳斯",
+"name_traditional": "喀納斯",
+"name_en": "KANASI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_KMG_CN",
+"type": "city",
+"iata": "KMG",
+"name": "昆明",
+"name_traditional": "昆明",
+"name_en": "KUNMING",
+"lat": 25.01252555847168,
+"lng": 102.70001220703125
+},
+{
+"id": "CITY_KOW_CN",
+"type": "city",
+"iata": "KOW",
+"name": "赣州",
+"name_traditional": "贛州",
+"name_en": "GANZHOU",
+"lat": 23.12700080871582,
+"lng": 113.34200286865234
+},
+{
+"id": "CITY_KRL_CN",
+"type": "city",
+"iata": "KRL",
+"name": "库尔勒",
+"name_traditional": "庫爾勒",
+"name_en": "KUERLE",
+"lat": 41.75326919555664,
+"lng": 86.13355255126953
+},
+{
+"id": "CitCnKELAMAY374",
+"type": "city",
+"iata": "KRY",
+"name": "克拉玛依",
+"name_traditional": "克拉瑪依",
+"name_en": "KELAMAYI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_KWE_CN",
+"type": "city",
+"iata": "KWE",
+"name": "贵阳",
+"name_traditional": "貴陽",
+"name_en": "GUIYANG",
+"lat": 26.543493270874023,
+"lng": 106.76110076904297
+},
+{
+"id": "CITY_KWL_CN",
+"type": "city",
+"iata": "KWL",
+"name": "桂林",
+"name_traditional": "桂林",
+"name_en": "GUILIN",
+"lat": 25.175621032714844,
+"lng": 110.35166931152344
+},
+{
+"id": "CitLINFEN956",
+"type": "city",
+"iata": "LFQ",
+"name": "临汾",
+"name_traditional": null,
+"name_en": "LINFEN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_LHW_CN",
+"type": "city",
+"iata": "LHW",
+"name": "兰州",
+"name_traditional": "蘭州",
+"name_en": "LANZHOU",
+"lat": 36.075897216796875,
+"lng": 103.75724029541016
+},
+{
+"id": "CitCnLISHUI183",
+"type": "city",
+"iata": "LIJ",
+"name": "丽水",
+"name_traditional": null,
+"name_en": "LISHUI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_LJG_CN",
+"type": "city",
+"iata": "LJG",
+"name": "丽江",
+"name_traditional": "麗江",
+"name_en": "LIJIANG",
+"lat": 26.876094818115234,
+"lng": 100.22994232177734
+},
+{
+"id": "CitCnQIANNAN283",
+"type": "city",
+"iata": "LLB",
+"name": "荔波",
+"name_traditional": null,
+"name_en": "LIBO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnYONGZHO428",
+"type": "city",
+"iata": "LLF",
+"name": "永州",
+"name_traditional": "永州",
+"name_en": "YONGZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnLVLIANG278",
+"type": "city",
+"iata": "LLV",
+"name": "吕梁",
+"name_traditional": "呂梁",
+"name_en": "LVLIANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitLONGNAN069",
+"type": "city",
+"iata": "LNL",
+"name": "陇南",
+"name_traditional": "陇南",
+"name_en": "LONGNAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnLIUPANS619",
+"type": "city",
+"iata": "LPF",
+"name": "六盘水",
+"name_traditional": null,
+"name_en": "LIUPANSHUI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnCHENZHO397",
+"type": "city",
+"iata": "LQP",
+"name": "郴州",
+"name_traditional": "郴州",
+"name_en": "CHENZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnLUNTAI182",
+"type": "city",
+"iata": "LTJ",
+"name": "轮台",
+"name_traditional": "輪台",
+"name_en": "LUNTAI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_LUM_CN",
+"type": "city",
+"iata": "LUM",
+"name": "芒市",
+"name_traditional": "芒市",
+"name_en": "MANGSHI",
+"lat": 24.525320053100586,
+"lng": 103.76290130615234
+},
+{
+"id": "CITY_LXA_CN",
+"type": "city",
+"iata": "LXA",
+"name": "拉萨",
+"name_traditional": "拉薩",
+"name_en": "LASA",
+"lat": 29.656843185424805,
+"lng": 91.1250991821289
+},
+{
+"id": "CITY_LYA_CN",
+"type": "city",
+"iata": "LYA",
+"name": "洛阳",
+"name_traditional": "洛陽",
+"name_en": "LUOYANG",
+"lat": 34.65155029296875,
+"lng": 112.44207763671875
+},
+{
+"id": "CITY_LYG_CN",
+"type": "city",
+"iata": "LYG",
+"name": "连云港",
+"name_traditional": "連雲港",
+"name_en": "LIANYUNGANG",
+"lat": 34.60866165161133,
+"lng": 119.50676727294922
+},
+{
+"id": "CITY_LYI_CN",
+"type": "city",
+"iata": "LYI",
+"name": "临沂",
+"name_traditional": "臨沂",
+"name_en": "LINYI",
+"lat": 37.18383026123047,
+"lng": 116.85549926757812
+},
+{
+"id": "CitCnLANGZHO497",
+"type": "city",
+"iata": "LZG",
+"name": "阆中",
+"name_traditional": "阆中",
+"name_en": "LANGZHONG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnLIUZHOU313",
+"type": "city",
+"iata": "LZH",
+"name": "柳州",
+"name_traditional": "柳州",
+"name_en": "LIUZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_LZO_CN",
+"type": "city",
+"iata": "LZO",
+"name": "泸州",
+"name_traditional": "淥州",
+"name_en": "LUZHOU",
+"lat": 28.763595581054688,
+"lng": 105.40862274169922
+},
+{
+"id": "CitCnLINZHI183",
+"type": "city",
+"iata": "LZY",
+"name": "林芝",
+"name_traditional": "林芝",
+"name_en": "LINZHI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_MDG_CN",
+"type": "city",
+"iata": "MDG",
+"name": "牡丹江",
+"name_traditional": "牡丹江",
+"name_en": "MUDANJIANG",
+"lat": 44.513790130615234,
+"lng": 129.70074462890625
+},
+{
+"id": "CitCnMIANYAN381",
+"type": "city",
+"iata": "MIG",
+"name": "绵阳",
+"name_traditional": "綿陽",
+"name_en": "MIANYANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_MXZ_CN",
+"type": "city",
+"iata": "MXZ",
+"name": "梅州",
+"name_traditional": "梅縣",
+"name_en": "MEIZHOU",
+"lat": 24.32131004333496,
+"lng": 116.11900329589844
+},
+{
+"id": "CitCnNANCHON373",
+"type": "city",
+"iata": "NAO",
+"name": "南充",
+"name_traditional": "南充",
+"name_en": "NANCHONG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnCHANGBA768",
+"type": "city",
+"iata": "NBS",
+"name": "白山",
+"name_traditional": "白山",
+"name_en": "BAISHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_NGB_CN",
+"type": "city",
+"iata": "NGB",
+"name": "宁波",
+"name_traditional": "寧波",
+"name_en": "NINGBO",
+"lat": 29.868335723876953,
+"lng": 121.54399108886719
+},
+{
+"id": "CitALI630",
+"type": "city",
+"iata": "NGQ",
+"name": "阿里",
+"name_traditional": null,
+"name_en": "Ngari Prefecture",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_NKG_CN",
+"type": "city",
+"iata": "NKG",
+"name": "南京",
+"name_traditional": "南京",
+"name_en": "NANJING",
+"lat": 32.05564498901367,
+"lng": 118.79773712158203
+},
+{
+"id": "CitNINGLANGL832",
+"type": "city",
+"iata": "NLH",
+"name": "宁蒗",
+"name_traditional": "寧蒗",
+"name_en": "NINGLANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnNALATI162",
+"type": "city",
+"iata": "NLT",
+"name": "新源",
+"name_traditional": "新源",
+"name_en": "XINYUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_NNG_CN",
+"type": "city",
+"iata": "NNG",
+"name": "南宁",
+"name_traditional": "南寧",
+"name_en": "NANNING",
+"lat": 22.653799057006836,
+"lng": 108.31090545654297
+},
+{
+"id": "CITY_NNY_CN",
+"type": "city",
+"iata": "NNY",
+"name": "南阳",
+"name_traditional": "南陽",
+"name_en": "NANYANG",
+"lat": 32.9950065612793,
+"lng": 112.5484619140625
+},
+{
+"id": "CitCnNANTONG286",
+"type": "city",
+"iata": "NTG",
+"name": "南通",
+"name_traditional": "南通",
+"name_en": "NANTONG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnMANZHOU512",
+"type": "city",
+"iata": "NZH",
+"name": "满洲里",
+"name_traditional": "滿洲裏",
+"name_en": "MANZHOULI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnZHALANT510",
+"type": "city",
+"iata": "NZL",
+"name": "扎兰屯",
+"name_traditional": "扎蘭屯",
+"name_en": "ZHALANTUN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnMOHE954",
+"type": "city",
+"iata": "OHE",
+"name": "漠河",
+"name_traditional": null,
+"name_en": "MOHE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnPANZHIH497",
+"type": "city",
+"iata": "PZI",
+"name": "攀枝花",
+"name_traditional": "攀枝花",
+"name_en": "PANZHIHUA",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnSHACHE149",
+"type": "city",
+"iata": "QSZ",
+"name": "莎车",
+"name_traditional": null,
+"name_en": "SHACHE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitRIZHAO973",
+"type": "city",
+"iata": "RIZ",
+"name": "日照",
+"name_traditional": "日照",
+"name_en": "RIZHAO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "poiRIKAZE974",
+"type": "city",
+"iata": "RKZ",
+"name": "日喀则",
+"name_traditional": "日喀則",
+"name_en": "RIKAZE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitBAYANNAOE376",
+"type": "city",
+"iata": "RLK",
+"name": "巴彦淖尔",
+"name_traditional": "巴彥淖爾",
+"name_en": "BAYANNAOER",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnRUOQIAN399",
+"type": "city",
+"iata": "RQA",
+"name": "若羌",
+"name_traditional": "若羌",
+"name_en": "RUOQIANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_SHA_CN",
+"type": "city",
+"iata": "SHA",
+"name": "上海",
+"name_traditional": "上海",
+"name_en": "SHANGHAI",
+"lat": 31.224353790283203,
+"lng": 121.47591400146484
+},
+{
+"id": "CITY_SHE_CN",
+"type": "city",
+"iata": "SHE",
+"name": "沈阳",
+"name_traditional": "沈陽",
+"name_en": "SHENYANG",
+"lat": 41.82758712768555,
+"lng": 123.4164047241211
+},
+{
+"id": "CitSHIHEZI076",
+"type": "city",
+"iata": "SHF",
+"name": "石河子",
+"name_traditional": "石河子",
+"name_en": "SHIHEZI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnSHASHI169",
+"type": "city",
+"iata": "SHS",
+"name": "荆州",
+"name_traditional": null,
+"name_en": "JINGZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_SIA_CN",
+"type": "city",
+"iata": "SIA",
+"name": "西安",
+"name_traditional": "西安",
+"name_en": "XIAN",
+"lat": 34.26487731933594,
+"lng": 108.94425964355469
+},
+{
+"id": "CitCnSHIJIAZ814",
+"type": "city",
+"iata": "SJW",
+"name": "石家庄",
+"name_traditional": "石家莊",
+"name_en": "SHIJIAZHUANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnSHANGRA380",
+"type": "city",
+"iata": "SQD",
+"name": "上饶",
+"name_traditional": "上饒",
+"name_en": "SHANGRAO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnSANMING278",
+"type": "city",
+"iata": "SQJ",
+"name": "三明",
+"name_traditional": null,
+"name_en": "SANMING",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_SWA_CN",
+"type": "city",
+"iata": "SWA",
+"name": "揭阳",
+"name_traditional": "揭陽",
+"name_en": "JIEYANG",
+"lat": 23.339073181152344,
+"lng": 116.58096313476562
+},
+{
+"id": "CitPUER764",
+"type": "city",
+"iata": "SYM",
+"name": "普洱",
+"name_traditional": "普洱",
+"name_en": "PUER",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_SYX_CN",
+"type": "city",
+"iata": "SYX",
+"name": "三亚",
+"name_traditional": "三亞",
+"name_en": "SANYA",
+"lat": 18.25262451171875,
+"lng": 109.51192474365234
+},
+{
+"id": "CITY_SZX_CN",
+"type": "city",
+"iata": "SZX",
+"name": "深圳",
+"name_traditional": "深圳",
+"name_en": "SHENZHEN",
+"lat": 22.54422950744629,
+"lng": 114.05779266357422
+},
+{
+"id": "CITY_TAO_CN",
+"type": "city",
+"iata": "TAO",
+"name": "青岛",
+"name_traditional": "青島",
+"name_en": "QINGDAO",
+"lat": 36.107933044433594,
+"lng": 120.41596221923828
+},
+{
+"id": "CITY_TCG_CN",
+"type": "city",
+"iata": "TCG",
+"name": "塔城",
+"name_traditional": "塔城",
+"name_en": "TACHENG",
+"lat": 46.66666793823242,
+"lng": 83.33333587646484
+},
+{
+"id": "CitCnTENGCHO486",
+"type": "city",
+"iata": "TCZ",
+"name": "腾冲",
+"name_traditional": "騰沖",
+"name_en": "TENGCHONG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnTONGREN294",
+"type": "city",
+"iata": "TEN",
+"name": "铜仁",
+"name_traditional": "銅仁",
+"name_en": "TONGREN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_TGO_CN",
+"type": "city",
+"iata": "TGO",
+"name": "通辽",
+"name_traditional": "通遼",
+"name_en": "TONGLIAO",
+"lat": 46.08717727661133,
+"lng": 122.13469696044922
+},
+{
+"id": "CitCnTIANSHU398",
+"type": "city",
+"iata": "THQ",
+"name": "天水",
+"name_traditional": "天水",
+"name_en": "TIANSHUI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitTULUFAN087",
+"type": "city",
+"iata": "TLQ",
+"name": "吐鲁番",
+"name_traditional": "吐魯番",
+"name_en": "TULUFAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_TNA_CN",
+"type": "city",
+"iata": "TNA",
+"name": "济南",
+"name_traditional": "濟南",
+"name_en": "JINAN",
+"lat": 36.665279388427734,
+"lng": 116.99491119384766
+},
+{
+"id": "CitCnTonghua287",
+"type": "city",
+"iata": "TNH",
+"name": "通化",
+"name_traditional": "通化",
+"name_en": "Tonghua",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_TSN_CN",
+"type": "city",
+"iata": "TSN",
+"name": "天津",
+"name_traditional": "天津",
+"name_en": "TIANJIN",
+"lat": 39.10385513305664,
+"lng": 117.25238037109375
+},
+{
+"id": "CitCnTANGSHA381",
+"type": "city",
+"iata": "TVS",
+"name": "唐山",
+"name_traditional": "唐山",
+"name_en": "TANGSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "poiTUMUSHUKE331",
+"type": "city",
+"iata": "TWC",
+"name": "图木舒克",
+"name_traditional": "圖木舒克",
+"name_en": "TUMUSHUKE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_TXN_CN",
+"type": "city",
+"iata": "TXN",
+"name": "黄山",
+"name_traditional": "黃山",
+"name_en": "HUANGSHAN",
+"lat": 29.705259323120117,
+"lng": 118.30709838867188
+},
+{
+"id": "CITY_TYN_CN",
+"type": "city",
+"iata": "TYN",
+"name": "太原",
+"name_traditional": "太原",
+"name_en": "TAIYUAN",
+"lat": 37.83574295043945,
+"lng": 112.52230834960938
+},
+{
+"id": "CitCnWULANCH595",
+"type": "city",
+"iata": "UCB",
+"name": "乌兰察布",
+"name_traditional": null,
+"name_en": "WULANCHABU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_URC_CN",
+"type": "city",
+"iata": "URC",
+"name": "乌鲁木齐",
+"name_traditional": "烏魯木齊",
+"name_en": "WULUMUQI",
+"lat": 43.78266906738281,
+"lng": 87.58651733398438
+},
+{
+"id": "CITY_UYN_CN",
+"type": "city",
+"iata": "UYN",
+"name": "榆林",
+"name_traditional": "榆林",
+"name_en": "YULIN",
+"lat": 38.2855224609375,
+"lng": 109.73521423339844
+},
+{
+"id": "CitCnSHIYAN181",
+"type": "city",
+"iata": "WDS",
+"name": "十堰",
+"name_traditional": "十堰",
+"name_en": "SHIYAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitWEIFANG057",
+"type": "city",
+"iata": "WEF",
+"name": "潍坊",
+"name_traditional": null,
+"name_en": "WEIFANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_WEH_CN",
+"type": "city",
+"iata": "WEH",
+"name": "威海",
+"name_traditional": "威海",
+"name_en": "WEIHAI",
+"lat": 37.51250076293945,
+"lng": 122.11849975585938
+},
+{
+"id": "CitSHAOYANG178",
+"type": "city",
+"iata": "WGN",
+"name": "邵阳",
+"name_traditional": null,
+"name_en": "SHAOYANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitWUHU777",
+"type": "city",
+"iata": "WHU",
+"name": "芜湖",
+"name_traditional": "蕪湖",
+"name_en": "WUHU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnWENSHAN285",
+"type": "city",
+"iata": "WNH",
+"name": "文山",
+"name_traditional": "文山",
+"name_en": "WENSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_WNZ_CN",
+"type": "city",
+"iata": "WNZ",
+"name": "温州",
+"name_traditional": "溫州",
+"name_en": "WENZHOU",
+"lat": 27.98703956604004,
+"lng": 120.65486145019531
+},
+{
+"id": "CitCnWUHAI071",
+"type": "city",
+"iata": "WUA",
+"name": "乌海",
+"name_traditional": "烏海",
+"name_en": "WUHAI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_WUH_CN",
+"type": "city",
+"iata": "WUH",
+"name": "武汉",
+"name_traditional": "武漢",
+"name_en": "WUHAN",
+"lat": 30.561161041259766,
+"lng": 114.38141632080078
+},
+{
+"id": "CitCnXINZHOU318",
+"type": "city",
+"iata": "WUT",
+"name": "忻州",
+"name_traditional": null,
+"name_en": "XINZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnWUXI990",
+"type": "city",
+"iata": "WUX",
+"name": "无锡",
+"name_traditional": "無錫",
+"name_en": "WUXI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnWUZHOU219",
+"type": "city",
+"iata": "WUZ",
+"name": "梧州",
+"name_traditional": "梧州",
+"name_en": "WUZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitWANZHOU100",
+"type": "city",
+"iata": "WXN",
+"name": "万州",
+"name_traditional": "萬州",
+"name_en": "WANZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitXINYANG086",
+"type": "city",
+"iata": "XAI",
+"name": "信阳",
+"name_traditional": null,
+"name_en": "XINYANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_XFN_CN",
+"type": "city",
+"iata": "XFN",
+"name": "襄阳",
+"name_traditional": "襄陽",
+"name_en": "XIANGYANG",
+"lat": 32.129268646240234,
+"lng": 112.15884399414062
+},
+{
+"id": "CitCnXICHANG267",
+"type": "city",
+"iata": "XIC",
+"name": "西昌",
+"name_traditional": "西昌",
+"name_en": "XICHANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_XIL_CN",
+"type": "city",
+"iata": "XIL",
+"name": "锡林浩特",
+"name_traditional": "錫林浩特",
+"name_en": "XILINHAOTE",
+"lat": 43.94429016113281,
+"lng": 116.06626892089844
+},
+{
+"id": "CITY_XMN_CN",
+"type": "city",
+"iata": "XMN",
+"name": "厦门",
+"name_traditional": "廈門",
+"name_en": "XIAMEN",
+"lat": 24.47966957092285,
+"lng": 118.08976745605469
+},
+{
+"id": "CITY_XNN_CN",
+"type": "city",
+"iata": "XNN",
+"name": "西宁",
+"name_traditional": "西寧",
+"name_en": "XINING",
+"lat": 36.630615234375,
+"lng": 101.7846908569336
+},
+{
+"id": "CitCnXINGTAI285",
+"type": "city",
+"iata": "XNT",
+"name": "邢台",
+"name_traditional": null,
+"name_en": "XINGTAI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_XUZ_CN",
+"type": "city",
+"iata": "XUZ",
+"name": "徐州",
+"name_traditional": "徐州",
+"name_en": "XUZHOU",
+"lat": 34.29166030883789,
+"lng": 118.35069274902344
+},
+{
+"id": "CitSANSHA958",
+"type": "city",
+"iata": "XYI",
+"name": "三沙",
+"name_traditional": null,
+"name_en": "SANSHA",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_YBP_CN",
+"type": "city",
+"iata": "YBP",
+"name": "宜宾",
+"name_traditional": "宜賓",
+"name_en": "YIBIN",
+"lat": 28.770526885986328,
+"lng": 104.62127685546875
+},
+{
+"id": "CitYICHUN976",
+"type": "city",
+"iata": "YIC",
+"name": "宜春",
+"name_traditional": "宜春",
+"name_en": "YICHUN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnAERSHAN267",
+"type": "city",
+"iata": "YIE",
+"name": "阿尔山",
+"name_traditional": "阿爾山",
+"name_en": "AERSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_YIH_CN",
+"type": "city",
+"iata": "YIH",
+"name": "宜昌",
+"name_traditional": "宜昌",
+"name_en": "YICHANG",
+"lat": 30.966552734375,
+"lng": 111.26134490966797
+},
+{
+"id": "CITY_YIN_CN",
+"type": "city",
+"iata": "YIN",
+"name": "伊宁",
+"name_traditional": "伊寧",
+"name_en": "YINING",
+"lat": 29.03852081298828,
+"lng": 114.5509033203125
+},
+{
+"id": "CitCnYINGKOU303",
+"type": "city",
+"iata": "YKH",
+"name": "营口",
+"name_traditional": "營口",
+"name_en": "YINGKOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitYULIN881",
+"type": "city",
+"iata": "YLX",
+"name": "玉林",
+"name_traditional": null,
+"name_en": "YULIN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnYANJI068",
+"type": "city",
+"iata": "YNJ",
+"name": "延吉",
+"name_traditional": null,
+"name_en": "YANJI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_YNT_CN",
+"type": "city",
+"iata": "YNT",
+"name": "烟台",
+"name_traditional": "煙臺",
+"name_en": "YANTAI",
+"lat": 37.46369552612305,
+"lng": 121.44794464111328
+},
+{
+"id": "CITY_YNZ_CN",
+"type": "city",
+"iata": "YNZ",
+"name": "盐城",
+"name_traditional": "鹽城",
+"name_en": "YANCHENG",
+"lat": 33.347469329833984,
+"lng": 120.16349792480469
+},
+{
+"id": "CitCnSONGYUA413",
+"type": "city",
+"iata": "YSQ",
+"name": "松原",
+"name_traditional": "松原",
+"name_en": "SONGYUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitYUTIAN986",
+"type": "city",
+"iata": "YTW",
+"name": "于田",
+"name_traditional": "于田",
+"name_en": "YUTIAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitYANGZHOU205",
+"type": "city",
+"iata": "YTY",
+"name": "扬州",
+"name_traditional": null,
+"name_en": "YANGZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnYUSHUZA786",
+"type": "city",
+"iata": "YUS",
+"name": "玉树",
+"name_traditional": "玉樹",
+"name_en": "YUSHU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitYUEYANG090",
+"type": "city",
+"iata": "YYA",
+"name": "岳阳",
+"name_traditional": null,
+"name_en": "YUEYANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnZHANGYE287",
+"type": "city",
+"iata": "YZY",
+"name": "张掖",
+"name_traditional": "張掖",
+"name_en": "ZHANGYE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnZHAOTON403",
+"type": "city",
+"iata": "ZAT",
+"name": "昭通",
+"name_traditional": "昭通",
+"name_en": "ZHAOTONG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnZHAOSU195",
+"type": "city",
+"iata": "ZFL",
+"name": "昭苏",
+"name_traditional": "昭蘇",
+"name_en": "ZHAOSU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_ZHA_CN",
+"type": "city",
+"iata": "ZHA",
+"name": "湛江",
+"name_traditional": "湛江",
+"name_en": "ZHANJIANG",
+"lat": 21.156719207763672,
+"lng": 110.38606262207031
+},
+{
+"id": "CitCnZHONGWE404",
+"type": "city",
+"iata": "ZHY",
+"name": "中卫",
+"name_traditional": null,
+"name_en": "ZHONGWEI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitCnZHANGJI708",
+"type": "city",
+"iata": "ZQZ",
+"name": "张家口",
+"name_traditional": "張家口",
+"name_en": "ZHANGJIAKOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CITY_ZUH_CN",
+"type": "city",
+"iata": "ZUH",
+"name": "珠海",
+"name_traditional": "珠海",
+"name_en": "ZHUHAI",
+"lat": 22.158353805541992,
+"lng": 113.38591003417969
+},
+{
+"id": "CitCnZUNYI104",
+"type": "city",
+"iata": "ZYI",
+"name": "遵义",
+"name_traditional": "遵義",
+"name_en": "ZUNYI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_AAT_CN",
+"type": "airport",
+"iata": "AAT",
+"name": "阿勒泰雪都",
+"name_traditional": "阿勒泰雪都",
+"name_en": "ALETAIXUEDU",
+"lat": 47.72222137451172,
+"lng": 88.15194702148438
+},
+{
+"id": "AirCnALAERTA694",
+"type": "airport",
+"iata": "ACF",
+"name": "阿拉尔塔里木",
+"name_traditional": "阿拉爾塔里木",
+"name_en": "ALAERTALIMU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnGUIYANG945",
+"type": "airport",
+"iata": "ACX",
+"name": "兴义万峰林",
+"name_traditional": "興義萬峰林",
+"name_en": "XINGYIWANFENGLIN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnGUANGXI796",
+"type": "airport",
+"iata": "AEB",
+"name": "百色",
+"name_traditional": "百色",
+"name_en": "BAISE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnHongyua398",
+"type": "airport",
+"iata": "AHJ",
+"name": "红原",
+"name_traditional": "紅原",
+"name_en": "Hongyuan",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_AKA_CN",
+"type": "airport",
+"iata": "AKA",
+"name": "安康富强",
+"name_traditional": "安康富強",
+"name_en": "ANKANGFUQIANG",
+"lat": 32.5,
+"lng": 109.00800323486328
+},
+{
+"id": "AIR_AKU_CN",
+"type": "airport",
+"iata": "AKU",
+"name": "阿克苏红旗坡",
+"name_traditional": "阿克蘇紅旗坡",
+"name_en": "AKESUHONGQIPO",
+"lat": 38.66666793823242,
+"lng": 75.66666412353516
+},
+{
+"id": "AirCnANSHANT796",
+"type": "airport",
+"iata": "AOG",
+"name": "鞍山腾鳌",
+"name_traditional": "鞍山騰鰲",
+"name_en": "ANSHANTENGAO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_AQG_CN",
+"type": "airport",
+"iata": "AQG",
+"name": "安庆天柱山",
+"name_traditional": "安慶（天柱山）",
+"name_en": "ANQING(TIANZHUSHAN)",
+"lat": 30.516666412353516,
+"lng": 117.03333282470703
+},
+{
+"id": "AirCnANSHUNH376",
+"type": "airport",
+"iata": "AVA",
+"name": "安顺黄果树",
+"name_traditional": "安順黃果樹",
+"name_en": "ANSHUNHUANGGUOSHU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirBAYANHAOT368",
+"type": "airport",
+"iata": "AXF",
+"name": "阿拉善左旗",
+"name_traditional": "阿拉善左旗",
+"name_en": "ALASHANZUOQI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnBOAO942",
+"type": "airport",
+"iata": "BAR",
+"name": "琼海博鳌",
+"name_traditional": "瓊海博鰲",
+"name_en": "QIOINGHAIBOAO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_BAV_CN",
+"type": "airport",
+"iata": "BAV",
+"name": "包头东河",
+"name_traditional": "包頭東河",
+"name_en": "BAOTOUDONGHE",
+"lat": 40.66669845581055,
+"lng": 109.98300170898438
+},
+{
+"id": "AirBijieFeix720",
+"type": "airport",
+"iata": "BFJ",
+"name": "毕节飞雄",
+"name_traditional": null,
+"name_en": "Bijie Feixiong",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnBengbuT835",
+"type": "airport",
+"iata": "BFY",
+"name": "腾湖",
+"name_traditional": "腾湖",
+"name_en": "Bengbu Tenghu",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_BHY_CN",
+"type": "airport",
+"iata": "BHY",
+"name": "北海福成",
+"name_traditional": "北海福成",
+"name_en": "BEIHAIFUCHENG",
+"lat": 21.483333587646484,
+"lng": 109.08333587646484
+},
+{
+"id": "AirCnQINHUAN045",
+"type": "airport",
+"iata": "BPE",
+"name": "秦皇岛北戴河",
+"name_traditional": "秦皇島北戴河",
+"name_en": "QINHUANGDAOBEIDAIHE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirXINJIANGB590",
+"type": "airport",
+"iata": "BPL",
+"name": "阿拉山口",
+"name_traditional": "阿拉山口",
+"name_en": "Alashankou",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCHANGDUBA651",
+"type": "airport",
+"iata": "BPX",
+"name": "昌都邦达",
+"name_traditional": "昌都邦達",
+"name_en": "CHANGDUBANGDA",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirBAOSHAN048",
+"type": "airport",
+"iata": "BSD",
+"name": "保山",
+"name_traditional": "保山",
+"name_en": "BAOSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnBOZHOU188",
+"type": "airport",
+"iata": "BZJ",
+"name": "亳州",
+"name_traditional": null,
+"name_en": "BOZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirBAZHONGEN703",
+"type": "airport",
+"iata": "BZX",
+"name": "巴中恩阳",
+"name_traditional": "巴中恩阳",
+"name_en": "BAZHONGENYANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_CAN_CN",
+"type": "airport",
+"iata": "CAN",
+"name": "广州白云",
+"name_traditional": "廣州白雲",
+"name_en": "GUANGZHOUBAIYUN",
+"lat": 23.183300018310547,
+"lng": 113.26699829101562
+},
+{
+"id": "AIR_CGD_CN",
+"type": "airport",
+"iata": "CGD",
+"name": "常德桃花源",
+"name_traditional": "常德桃花源",
+"name_en": "CHANGDETAOHUAYUAN",
+"lat": 29.03333282470703,
+"lng": 111.68333435058594
+},
+{
+"id": "AIR_CGO_CN",
+"type": "airport",
+"iata": "CGO",
+"name": "郑州新郑国际",
+"name_traditional": "鄭州新鄭國際",
+"name_en": "Zhengzhou Xinzheng International",
+"lat": 34.766700744628906,
+"lng": 113.71700286865234
+},
+{
+"id": "AirCnLONGJIA531",
+"type": "airport",
+"iata": "CGQ",
+"name": "长春龙嘉国际",
+"name_traditional": "長春龍嘉國際",
+"name_en": "Changchun Longjia International",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCn373",
+"type": "airport",
+"iata": "CHG",
+"name": "朝阳",
+"name_traditional": "朝陽",
+"name_en": "CHAOYANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_CIF_CN",
+"type": "airport",
+"iata": "CIF",
+"name": "赤峰玉龙",
+"name_traditional": "赤峰玉龍",
+"name_en": "CHIFENGYULONG",
+"lat": 42.33333206176758,
+"lng": 119.00833129882812
+},
+{
+"id": "AIR_CKG_CN",
+"type": "airport",
+"iata": "CKG",
+"name": "重庆江北国际",
+"name_traditional": "重慶江北國際",
+"name_en": "Chongqing Jiangbei International",
+"lat": 29.5,
+"lng": 106.3499984741211
+},
+{
+"id": "AirCnChangha820",
+"type": "airport",
+"iata": "CNI",
+"name": "大连长海",
+"name_traditional": "大連長海",
+"name_en": "Changhai Dachangshandao",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnXIANNVS611",
+"type": "airport",
+"iata": "CQW",
+"name": "仙女山",
+"name_traditional": "仙女山",
+"name_en": "XIANNVSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnCHANGSH203",
+"type": "airport",
+"iata": "CSX",
+"name": "长沙黄花",
+"name_traditional": "長沙黃花",
+"name_en": "CHANGSHAHUANGHUA",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_CTU_CN",
+"type": "airport",
+"iata": "CTU",
+"name": "成都双流国际",
+"name_traditional": "成都雙流國際",
+"name_en": "Chengdu Shuangliu International",
+"lat": 30.58329963684082,
+"lng": 103.94999694824219
+},
+{
+"id": "AirCANGYUAN170",
+"type": "airport",
+"iata": "CWJ",
+"name": "沧源佤山",
+"name_traditional": "滄源佤山",
+"name_en": "CANGYUANWASHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "poiCnCHANGZH145",
+"type": "airport",
+"iata": "CZX",
+"name": "常州奔牛",
+"name_traditional": "常州奔牛",
+"name_en": "CHANGZHOUBENNIU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_DAT_CN",
+"type": "airport",
+"iata": "DAT",
+"name": "大同云冈",
+"name_traditional": "大同雲崗",
+"name_en": "DATONGYUNGANG",
+"lat": 40.08330154418945,
+"lng": 113.30000305175781
+},
+{
+"id": "AirCnYADING161",
+"type": "airport",
+"iata": "DCY",
+"name": "亚丁",
+"name_traditional": "亞丁",
+"name_en": "YADING",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_DIG_CN",
+"type": "airport",
+"iata": "DIG",
+"name": "迪庆香格里拉",
+"name_traditional": "迪慶香格裏拉",
+"name_en": "DIQINGXIANGGELILA",
+"lat": 27.789722442626953,
+"lng": 99.67778015136719
+},
+{
+"id": "AIR_DLC_CN",
+"type": "airport",
+"iata": "DLC",
+"name": "大连周水子国际",
+"name_traditional": "大連周水子",
+"name_en": "Dalian Zhoushuizi International",
+"lat": 38.96670150756836,
+"lng": 121.55000305175781
+},
+{
+"id": "AIR_DLU_CN",
+"type": "airport",
+"iata": "DLU",
+"name": "凤仪",
+"name_traditional": "凤仪",
+"name_en": "Fengyi",
+"lat": 25.66666603088379,
+"lng": 100.31666564941406
+},
+{
+"id": "AIR_DNH_CN",
+"type": "airport",
+"iata": "DNH",
+"name": "敦煌",
+"name_traditional": "敦煌",
+"name_en": "DUNHUANG",
+"lat": 40.20000076293945,
+"lng": 94.68333435058594
+},
+{
+"id": "AIR_DOY_CN",
+"type": "airport",
+"iata": "DOY",
+"name": "东营胜利",
+"name_traditional": "東營永安",
+"name_en": "DONGYINGSHENGLI",
+"lat": 37.5182991027832,
+"lng": 118.78800201416016
+},
+{
+"id": "AirCnEERDUOS606",
+"type": "airport",
+"iata": "DSN",
+"name": "鄂尔多斯伊金霍洛",
+"name_traditional": "鄂爾多斯伊金霍洛",
+"name_en": "EERDUOSIYIJINHUOLUO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnXIANGXI212",
+"type": "airport",
+"iata": "DXJ",
+"name": "湘西边城",
+"name_traditional": "湘西邊城",
+"name_en": "XIANGXIBIANCHENG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnZHANGJI204",
+"type": "airport",
+"iata": "DYG",
+"name": "张家界荷花",
+"name_traditional": "張家界荷花",
+"name_en": "ZHANGJIAJIEHEHUA",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnDAZHOUH786",
+"type": "airport",
+"iata": "DZH",
+"name": "达州金垭",
+"name_traditional": "達州金埡",
+"name_en": "DAZHOUJINYA",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnEZHOUHU619",
+"type": "airport",
+"iata": "EHU",
+"name": "鄂州花湖",
+"name_traditional": "鄂州花湖",
+"name_en": "EZHOUHUAHU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_ENH_CN",
+"type": "airport",
+"iata": "ENH",
+"name": "恩施许家坪",
+"name_traditional": "恩施許家坪",
+"name_en": "ENSHIXUJIAPING",
+"lat": 30.28333282470703,
+"lng": 109.31666564941406
+},
+{
+"id": "AIR_ENY_CN",
+"type": "airport",
+"iata": "ENY",
+"name": "延安南泥湾",
+"name_traditional": "延安二十裏鋪",
+"name_en": "YananNanNiWan",
+"lat": 36,
+"lng": 109.33300018310547
+},
+{
+"id": "AirERLIANHAO380",
+"type": "airport",
+"iata": "ERL",
+"name": "二连浩特赛乌素",
+"name_traditional": "二連浩特賽烏素",
+"name_en": "ERLIANHAOTESAIWUSU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_FOC_CN",
+"type": "airport",
+"iata": "FOC",
+"name": "福州长乐国际",
+"name_traditional": "福州長樂",
+"name_en": "Fuzhou Changle International",
+"lat": 26.100000381469727,
+"lng": 119.28299713134766
+},
+{
+"id": "AIR_FUG_CN",
+"type": "airport",
+"iata": "FUG",
+"name": "阜阳",
+"name_traditional": "阜陽",
+"name_en": "FUYANG",
+"lat": 32.86666488647461,
+"lng": 115.69999694824219
+},
+{
+"id": "AirCnShadi046",
+"type": "airport",
+"iata": "FUO",
+"name": "沙堤",
+"name_traditional": "沙堤",
+"name_en": "Shadi",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnDongji160",
+"type": "airport",
+"iata": "FYJ",
+"name": "东极",
+"name_traditional": "東極",
+"name_en": "Dongji",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCn189",
+"type": "airport",
+"iata": "FYN",
+"name": "可可托海",
+"name_traditional": "可可托海",
+"name_en": "Koktokay",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnGEERMU170",
+"type": "airport",
+"iata": "GOQ",
+"name": "格尔木",
+"name_traditional": "格爾木",
+"name_en": "GEERMU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnPANLONG276",
+"type": "airport",
+"iata": "GYS",
+"name": "盘龙",
+"name_traditional": "盤龍",
+"name_en": "PANLONG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnLiupans600",
+"type": "airport",
+"iata": "GYU",
+"name": "六盘山",
+"name_traditional": "六盘山",
+"name_en": "Liupanshan",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnGesar055",
+"type": "airport",
+"iata": "GZG",
+"name": "格萨尔",
+"name_traditional": "格薩爾",
+"name_en": "Gesar",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_HAK_CN",
+"type": "airport",
+"iata": "HAK",
+"name": "海口美兰国际",
+"name_traditional": "海口美蘭國際",
+"name_en": "Haikou Meilan International",
+"lat": 20.016700744628906,
+"lng": 110.3499984741211
+},
+{
+"id": "AirHECHIJINC188",
+"type": "airport",
+"iata": "HCJ",
+"name": "河池金城江",
+"name_traditional": "河池金城江",
+"name_en": "HECHIJINCHENGJIANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnCHENZHO918",
+"type": "airport",
+"iata": "HCZ",
+"name": "郴州北湖",
+"name_traditional": "郴州北湖",
+"name_en": "CHENZHOUBEIHU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnHEBEIHA652",
+"type": "airport",
+"iata": "HDG",
+"name": "邯郸",
+"name_traditional": "邯鄲",
+"name_en": "HANDAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_HET_CN",
+"type": "airport",
+"iata": "HET",
+"name": "呼和浩特白塔国际",
+"name_traditional": "呼和浩特白塔國際",
+"name_en": "Hohhot Baita International",
+"lat": 40.849998474121094,
+"lng": 111.81700134277344
+},
+{
+"id": "AIR_HFE_CN",
+"type": "airport",
+"iata": "HFE",
+"name": "合肥新桥国际",
+"name_traditional": "合肥新橋國際",
+"name_en": "Hefei Xinqiao International",
+"lat": 31.78333282470703,
+"lng": 117.30000305175781
+},
+{
+"id": "AIR_HGH_CN",
+"type": "airport",
+"iata": "HGH",
+"name": "杭州萧山",
+"name_traditional": "杭州蕭山",
+"name_en": "HANGZHOUXIAOSHAN",
+"lat": 30.33329963684082,
+"lng": 120.23300170898438
+},
+{
+"id": "AirHUAIANLIA807",
+"type": "airport",
+"iata": "HIA",
+"name": "淮安涟水",
+"name_traditional": "HUAIANLIANSHUI",
+"name_en": "HUAIANLIANSHUI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnHUAIHUA118",
+"type": "airport",
+"iata": "HJJ",
+"name": "怀化芷江",
+"name_traditional": "懷化證江",
+"name_en": "HUAIHUAZHIJIANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_HLD_CN",
+"type": "airport",
+"iata": "HLD",
+"name": "呼伦贝尔海拉尔",
+"name_traditional": "呼倫貝爾海拉爾",
+"name_en": "HULUNBEIERHAILAER",
+"lat": 49.20000076293945,
+"lng": 119.81666564941406
+},
+{
+"id": "AIR_HLH_CN",
+"type": "airport",
+"iata": "HLH",
+"name": "乌兰浩特",
+"name_traditional": "烏蘭浩特",
+"name_en": "WULANHAOTE",
+"lat": 46.08333206176758,
+"lng": 122.08333587646484
+},
+{
+"id": "AIR_HMI_CN",
+"type": "airport",
+"iata": "HMI",
+"name": "哈密",
+"name_traditional": "哈密",
+"name_en": "HAMI",
+"lat": 42.483333587646484,
+"lng": 93.50555419921875
+},
+{
+"id": "AirCnHENGYAN319",
+"type": "airport",
+"iata": "HNY",
+"name": "衡阳南岳",
+"name_traditional": "衡陽東江",
+"name_en": "HENGYANGDONGJIANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCn321",
+"type": "airport",
+"iata": "HPG",
+"name": "红坪",
+"name_traditional": "紅坪",
+"name_en": "Hongping",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnHONGQIQ401",
+"type": "airport",
+"iata": "HQQ",
+"name": "安阳红旗渠",
+"name_traditional": null,
+"name_en": "HONGQIQU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_HRB_CN",
+"type": "airport",
+"iata": "HRB",
+"name": "哈尔滨太平国际",
+"name_traditional": "哈爾濱太平國際",
+"name_en": "Harbin Taiping International",
+"lat": 45.61666488647461,
+"lng": 126.21666717529297
+},
+{
+"id": "AirCnShaogua040",
+"type": "airport",
+"iata": "HSC",
+"name": "韶关丹霞",
+"name_traditional": "韶關丹霞",
+"name_en": "Shaoguan Danxia",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnZHOUSHA473",
+"type": "airport",
+"iata": "HSN",
+"name": "舟山普陀山",
+"name_traditional": "舟山普陀山",
+"name_en": "ZHOUSHANPUTUOSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_HTN_CN",
+"type": "airport",
+"iata": "HTN",
+"name": "昆冈",
+"name_traditional": "昆冈",
+"name_en": "Kungang",
+"lat": 37.03333282470703,
+"lng": 79.86666870117188
+},
+{
+"id": "AirCnHualien267",
+"type": "airport",
+"iata": "HUN",
+"name": "花莲",
+"name_traditional": "花蓮",
+"name_en": "Hualien",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnHuolinh385",
+"type": "airport",
+"iata": "HUO",
+"name": "霍林郭勒霍林河",
+"name_traditional": "霍林郭勒霍林河",
+"name_en": "HUOLINGUOLEHUOLINHE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirHUIZHOUPI849",
+"type": "airport",
+"iata": "HUZ",
+"name": "惠州平潭",
+"name_traditional": null,
+"name_en": "HUIZHOUPINGTAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnDelingh353",
+"type": "airport",
+"iata": "HXD",
+"name": "德令哈",
+"name_traditional": "德令哈",
+"name_en": "Delingha",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnLUQIAO176",
+"type": "airport",
+"iata": "HYN",
+"name": "路桥",
+"name_traditional": "路橋",
+"name_en": "LUQIAO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirHEZE744",
+"type": "airport",
+"iata": "HZA",
+"name": "菏泽牡丹",
+"name_traditional": "菏泽牡丹",
+"name_en": "HEZEMUDAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_HZG_CN",
+"type": "airport",
+"iata": "HZG",
+"name": "汉中城固",
+"name_traditional": "漢中西關",
+"name_en": "HANZHONGCHENGGU",
+"lat": 32.983299255371094,
+"lng": 107.18299865722656
+},
+{
+"id": "AIR_INC_CN",
+"type": "airport",
+"iata": "INC",
+"name": "银川河东",
+"name_traditional": "銀川河東",
+"name_en": "YINCHUANHEDONG",
+"lat": 38.36669921875,
+"lng": 106.36699676513672
+},
+{
+"id": "AIR_IQN_CN",
+"type": "airport",
+"iata": "IQN",
+"name": "庆阳",
+"name_traditional": "慶陽",
+"name_en": "QINGYANG",
+"lat": 36.099998474121094,
+"lng": 107.78333282470703
+},
+{
+"id": "AirCnJIANGBU674",
+"type": "airport",
+"iata": "JBK",
+"name": "江布拉克",
+"name_traditional": null,
+"name_en": "JIANGBULAKE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_JDZ_CN",
+"type": "airport",
+"iata": "JDZ",
+"name": "罗家",
+"name_traditional": "罗家",
+"name_en": "Luojia",
+"lat": 29.266666412353516,
+"lng": 117.18333435058594
+},
+{
+"id": "AirCnJIAGEDA452",
+"type": "airport",
+"iata": "JGD",
+"name": "大兴安岭鄂伦春",
+"name_traditional": "大兴安岭鄂伦春",
+"name_en": "Elunchun",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnJiayugu295",
+"type": "airport",
+"iata": "JGN",
+"name": "酒泉",
+"name_traditional": "酒泉",
+"name_en": "Jiayuguan Jiuquan",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirJINGGANGS579",
+"type": "airport",
+"iata": "JGS",
+"name": "井冈山",
+"name_traditional": null,
+"name_en": "JINGGANGSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_JHG_CN",
+"type": "airport",
+"iata": "JHG",
+"name": "西双版纳嘎洒国际",
+"name_traditional": "西雙版納嘎灑國際",
+"name_en": "XISHUANGBANNAGASAGUOJI",
+"lat": 22.016666412353516,
+"lng": 100.80000305175781
+},
+{
+"id": "AirCnJINCHUA373",
+"type": "airport",
+"iata": "JIC",
+"name": "金川",
+"name_traditional": null,
+"name_en": "JINCHUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirWULINGSHA404",
+"type": "airport",
+"iata": "JIQ",
+"name": "黔江武陵山",
+"name_traditional": "黔江武陵山",
+"name_en": "QIANJIANGWULINGSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_JIU_CN",
+"type": "airport",
+"iata": "JIU",
+"name": "九江庐山",
+"name_traditional": "九江廬山",
+"name_en": "JIUJIANGLUSHAN",
+"lat": 29.733333587646484,
+"lng": 115.98332977294922
+},
+{
+"id": "AirCnQUANZHO690",
+"type": "airport",
+"iata": "JJN",
+"name": "泉州晋江",
+"name_traditional": "泉州晉江",
+"name_en": "QUANZHOUJINJIANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirLanCangJi807",
+"type": "airport",
+"iata": "JMJ",
+"name": "澜沧景迈",
+"name_traditional": null,
+"name_en": "LANCANG JINGMAI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_JMU_CN",
+"type": "airport",
+"iata": "JMU",
+"name": "松江国际",
+"name_traditional": "松江國際",
+"name_en": "Songjiang",
+"lat": 46.83330154418945,
+"lng": 130.35000610351562
+},
+{
+"id": "AIR_JNG_CN",
+"type": "airport",
+"iata": "JNG",
+"name": "济宁大安",
+"name_traditional": "濟寧大安",
+"name_en": "JININGQUFU",
+"lat": 35.41666793823242,
+"lng": 116.53333282470703
+},
+{
+"id": "AIR_JNZ_CN",
+"type": "airport",
+"iata": "JNZ",
+"name": "锦州湾",
+"name_traditional": "錦州灣",
+"name_en": "JINZHOUWAN",
+"lat": 41.11666488647461,
+"lng": 121.01667022705078
+},
+{
+"id": "AirCnRUIJIN182",
+"type": "airport",
+"iata": "JRJ",
+"name": "瑞金",
+"name_traditional": "瑞金",
+"name_en": "RUIJIN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCHIZHOUJI150",
+"type": "airport",
+"iata": "JUH",
+"name": "池州九华山",
+"name_traditional": null,
+"name_en": "CHIZHOUJIUHUASHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnQuzhou209",
+"type": "airport",
+"iata": "JUZ",
+"name": "衢州",
+"name_traditional": "衢州",
+"name_en": "Quzhou",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirXINGKAIHU284",
+"type": "airport",
+"iata": "JXA",
+"name": "鸡西兴凯湖",
+"name_traditional": "雞西興凱湖",
+"name_en": "JIXIXINGKAIHU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnJIUZHAI612",
+"type": "airport",
+"iata": "JZH",
+"name": "九寨黄龙",
+"name_traditional": "九寨黃龍",
+"name_en": "JIUZHAIGOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_KCA_CN",
+"type": "airport",
+"iata": "KCA",
+"name": "库车龟兹",
+"name_traditional": "庫車龜茲",
+"name_en": "KUCHEQIUCI",
+"lat": 41.71666717529297,
+"lng": 83
+},
+{
+"id": "AIR_KHG_CN",
+"type": "airport",
+"iata": "KHG",
+"name": "喀什徕宁国际",
+"name_traditional": "喀什徕宁国际",
+"name_en": "KASHI",
+"lat": 39.66666793823242,
+"lng": 76.01667022705078
+},
+{
+"id": "AIR_KHN_CN",
+"type": "airport",
+"iata": "KHN",
+"name": "南昌昌北国际",
+"name_traditional": "南昌昌北國際",
+"name_en": "Nanchang Changbei International",
+"lat": 28.63330078125,
+"lng": 115.80000305175781
+},
+{
+"id": "AirCnHuangPi486",
+"type": "airport",
+"iata": "KJH",
+"name": "黄平",
+"name_traditional": "黄平",
+"name_en": "HuangPing",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnBUERJIN907",
+"type": "airport",
+"iata": "KJI",
+"name": "布尔津喀纳斯",
+"name_traditional": "布爾津喀納斯",
+"name_en": "BUERJINKANASI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnKanasi156",
+"type": "airport",
+"iata": "KJI",
+"name": "喀纳斯",
+"name_traditional": "喀納斯",
+"name_en": "Kanasi",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_KMG_CN",
+"type": "airport",
+"iata": "KMG",
+"name": "昆明长水国际",
+"name_traditional": "昆明長水國際",
+"name_en": "KUNMINGCHANGSHUIGUOJI",
+"lat": 24.983299255371094,
+"lng": 102.73300170898438
+},
+{
+"id": "AIR_KOW_CN",
+"type": "airport",
+"iata": "KOW",
+"name": "赣州黄金",
+"name_traditional": "贛州黃金",
+"name_en": "GANZHOUHUANGJIN",
+"lat": 25.899999618530273,
+"lng": 114.91666412353516
+},
+{
+"id": "AIR_KRL_CN",
+"type": "airport",
+"iata": "KRL",
+"name": "库尔勒梨城",
+"name_traditional": "庫爾勒梨城",
+"name_en": "KUERLELICHENG",
+"lat": 41.733333587646484,
+"lng": 86.1500015258789
+},
+{
+"id": "AirCnKELAMAY370",
+"type": "airport",
+"iata": "KRY",
+"name": "克拉玛依",
+"name_traditional": "克拉瑪依",
+"name_en": "KELAMAYI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_KWE_CN",
+"type": "airport",
+"iata": "KWE",
+"name": "贵阳龙洞堡国际",
+"name_traditional": "貴陽龍洞堡國際",
+"name_en": "Guiyang Longdongbao International",
+"lat": 26.516700744628906,
+"lng": 106.23500061035156
+},
+{
+"id": "AIR_KWL_CN",
+"type": "airport",
+"iata": "KWL",
+"name": "桂林两江国际",
+"name_traditional": "桂林兩江國際",
+"name_en": "Guilin Liangjiang International",
+"lat": 25.200000762939453,
+"lng": 110.31700134277344
+},
+{
+"id": "AirLINFENQIA591",
+"type": "airport",
+"iata": "LFQ",
+"name": "临汾尧都",
+"name_traditional": null,
+"name_en": "LINFENYAODU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_LHW_CN",
+"type": "airport",
+"iata": "LHW",
+"name": "兰州中川",
+"name_traditional": "蘭州中川",
+"name_en": "LANZHOUZHONGCHUAN",
+"lat": 36.516700744628906,
+"lng": 103.61699676513672
+},
+{
+"id": "AirCnLiangpi478",
+"type": "airport",
+"iata": "LIA",
+"name": "重庆梁平",
+"name_traditional": "重慶梁平",
+"name_en": "Liangping",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnLISHUI179",
+"type": "airport",
+"iata": "LIJ",
+"name": "丽水",
+"name_traditional": null,
+"name_en": "LISHUI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_LJG_CN",
+"type": "airport",
+"iata": "LJG",
+"name": "丽江三义",
+"name_traditional": "麗江三義",
+"name_en": "LIJIANGSANYI",
+"lat": 26.683332443237305,
+"lng": 100.25
+},
+{
+"id": "AirCnLIBO947",
+"type": "airport",
+"iata": "LLB",
+"name": "荔波",
+"name_traditional": "荔波",
+"name_en": "LIBO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnLINGLIN377",
+"type": "airport",
+"iata": "LLF",
+"name": "零陵",
+"name_traditional": "零陵",
+"name_en": "LINGLING",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnLVLIANG274",
+"type": "airport",
+"iata": "LLV",
+"name": "吕梁",
+"name_traditional": "呂梁",
+"name_en": "LVLIANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirLONGNANCH014",
+"type": "airport",
+"iata": "LNL",
+"name": "陇南成县",
+"name_traditional": "陇南成县",
+"name_en": "LONGNANCHENGXIAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnYUEZHAO298",
+"type": "airport",
+"iata": "LPF",
+"name": "月照",
+"name_traditional": null,
+"name_en": "YUEZHAO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnBAYINGU462",
+"type": "airport",
+"iata": "LTJ",
+"name": "巴音郭楞轮台",
+"name_traditional": "巴音郭楞輪台",
+"name_en": "BAYINGUOLENGLUNTAI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_LUM_CN",
+"type": "airport",
+"iata": "LUM",
+"name": "芒市德宏",
+"name_traditional": "芒市德宏",
+"name_en": "MANGSHIDEHONG",
+"lat": 24.516666412353516,
+"lng": 103.75
+},
+{
+"id": "AIR_LXA_CN",
+"type": "airport",
+"iata": "LXA",
+"name": "拉萨贡嘎国际",
+"name_traditional": "拉薩貢納國際",
+"name_en": "Lasa Gongna International",
+"lat": 29.66666603088379,
+"lng": 91.1500015258789
+},
+{
+"id": "AIR_LYA_CN",
+"type": "airport",
+"iata": "LYA",
+"name": "洛阳北郊",
+"name_traditional": "洛陽北郊",
+"name_en": "LUOYANGBEIJIAO",
+"lat": 34.68333435058594,
+"lng": 112.46666717529297
+},
+{
+"id": "AIR_LYG_CN",
+"type": "airport",
+"iata": "LYG",
+"name": "连云港花果山",
+"name_traditional": "連雲港花果山",
+"name_en": "LIANYUNGANGHUAGUOSHAN",
+"lat": 34.54999923706055,
+"lng": 119.25
+},
+{
+"id": "AIR_LYI_CN",
+"type": "airport",
+"iata": "LYI",
+"name": "临沂启阳",
+"name_traditional": "臨沂啟陽",
+"name_en": "LINYIQIYANG",
+"lat": 35.16669845581055,
+"lng": 118.30000305175781
+},
+{
+"id": "AirCnLANGZHO230",
+"type": "airport",
+"iata": "LZG",
+"name": "阆中古城",
+"name_traditional": "阆中古城",
+"name_en": "LANGZHONGGUCHENG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnLIUZHOU029",
+"type": "airport",
+"iata": "LZH",
+"name": "柳州白莲",
+"name_traditional": "柳州白蓮",
+"name_en": "LIUZHOUBAILIAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_LZO_CN",
+"type": "airport",
+"iata": "LZO",
+"name": "泸州云龙",
+"name_traditional": "淥州雲龍",
+"name_en": "LUZHOULANTIAN",
+"lat": 28.883333206176758,
+"lng": 105.3499984741211
+},
+{
+"id": "AirCnMILIN062",
+"type": "airport",
+"iata": "LZY",
+"name": "米林",
+"name_traditional": "米林",
+"name_en": "MILIN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_MDG_CN",
+"type": "airport",
+"iata": "MDG",
+"name": "牡丹江海浪",
+"name_traditional": "牡丹江海浪",
+"name_en": "MUDANJIANGHAILANG",
+"lat": 44.599998474121094,
+"lng": 129.5
+},
+{
+"id": "AirCnMIANYAN113",
+"type": "airport",
+"iata": "MIG",
+"name": "绵阳南郊",
+"name_traditional": "綿陽南郊",
+"name_en": "MIANYANGNANJIAO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_MXZ_CN",
+"type": "airport",
+"iata": "MXZ",
+"name": "梅州梅县",
+"name_traditional": "梅州梅縣",
+"name_en": "MEIZHOUMEIXIAN",
+"lat": 24.350000381469727,
+"lng": 116.13333129882812
+},
+{
+"id": "AirCnNANCHON110",
+"type": "airport",
+"iata": "NAO",
+"name": "南充高坪",
+"name_traditional": "南充高坪",
+"name_en": "NANCHONGGAOPING",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnCHANGBA764",
+"type": "airport",
+"iata": "NBS",
+"name": "长白山",
+"name_traditional": "長白山",
+"name_en": "CHANGBAISHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_NGB_CN",
+"type": "airport",
+"iata": "NGB",
+"name": "宁波栎社国际",
+"name_traditional": "寧波櫟社國際",
+"name_en": "Ningbo Lishe International",
+"lat": 29.816699981689453,
+"lng": 121.46700286865234
+},
+{
+"id": "AirNgariGuns419",
+"type": "airport",
+"iata": "NGQ",
+"name": "阿里昆莎",
+"name_traditional": "阿里昆莎",
+"name_en": "ALIKUNSHA",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_NKG_CN",
+"type": "airport",
+"iata": "NKG",
+"name": "南京禄口国际",
+"name_traditional": "南京祿口",
+"name_en": "Nanjing Lukou International",
+"lat": 32,
+"lng": 118.80000305175781
+},
+{
+"id": "AirNINGLANGL828",
+"type": "airport",
+"iata": "NLH",
+"name": "宁蒗泸沽湖",
+"name_traditional": "NINGLANGLUGUHU",
+"name_en": "NINGLANGLUGUHU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnNALATI158",
+"type": "airport",
+"iata": "NLT",
+"name": "新源那拉提",
+"name_traditional": "新源那拉提",
+"name_en": "XINYUANNALATI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_NNG_CN",
+"type": "airport",
+"iata": "NNG",
+"name": "南宁吴圩国际",
+"name_traditional": "南寧吳圩國際",
+"name_en": "Nanning Wuxu International",
+"lat": 22.61669921875,
+"lng": 108.18299865722656
+},
+{
+"id": "AIR_NNY_CN",
+"type": "airport",
+"iata": "NNY",
+"name": "南阳姜营",
+"name_traditional": "南陽姜營",
+"name_en": "NANYANGJIANGYING",
+"lat": 33,
+"lng": 112.53299713134766
+},
+{
+"id": "AirCnNANTONG686",
+"type": "airport",
+"iata": "NTG",
+"name": "南通兴东国际",
+"name_traditional": "南通興東國際",
+"name_en": "NANTONGXINGDONGGUOJI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnWULUNHA495",
+"type": "airport",
+"iata": "NZH",
+"name": "满洲里西郊国际",
+"name_traditional": "呼倫貝爾滿洲裏西郊機場",
+"name_en": "Manzhouli Xijiao International",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnCHENGJI784",
+"type": "airport",
+"iata": "NZL",
+"name": "成吉思汗",
+"name_traditional": "成吉思汗",
+"name_en": "CHENGJISIHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnMOHE950",
+"type": "airport",
+"iata": "OHE",
+"name": "漠河",
+"name_traditional": null,
+"name_en": "MOHE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_PEK_CN",
+"type": "airport",
+"iata": "PEK",
+"name": "北京首都国际",
+"name_traditional": "北京首都國際",
+"name_en": "Beijing Capital International",
+"lat": 40.06669998168945,
+"lng": 116.58300018310547
+},
+{
+"id": "AirBEIJINGDA221",
+"type": "airport",
+"iata": "PKX",
+"name": "北京大兴国际",
+"name_traditional": "北京大興國際",
+"name_en": "Beijing Daxing International",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirSHANGHAIP346",
+"type": "airport",
+"iata": "PVG",
+"name": "上海浦东国际",
+"name_traditional": "上海浦東國際",
+"name_en": "Shanghai Pudong International",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnPANZHIH445",
+"type": "airport",
+"iata": "PZI",
+"name": "攀枝花保安营",
+"name_traditional": "攀枝花保安營",
+"name_en": "PANZHIHUABAOANYING",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnShache145",
+"type": "airport",
+"iata": "QSZ",
+"name": "叶尔羌",
+"name_traditional": "叶尔羌",
+"name_en": "Yeerqiang",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirRIZHAOSHA827",
+"type": "airport",
+"iata": "RIZ",
+"name": "日照山字河",
+"name_traditional": "RIZHAOSHANZIHE",
+"name_en": "RIZHAOSHANZIHE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirRIKAZEHEP597",
+"type": "airport",
+"iata": "RKZ",
+"name": "日喀则和平",
+"name_traditional": "日喀則和平",
+"name_en": "RIKAZEHEPING",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirBAYANNAOE329",
+"type": "airport",
+"iata": "RLK",
+"name": "巴彦淖尔天吉泰",
+"name_traditional": "BAYANNAOERTIANJITAI",
+"name_en": "BAYANNAOERTIANJITAI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnLOULAN176",
+"type": "airport",
+"iata": "RQA",
+"name": "楼兰",
+"name_traditional": "樓蘭",
+"name_en": "LOULAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_SHA_CN",
+"type": "airport",
+"iata": "SHA",
+"name": "上海虹桥",
+"name_traditional": "上海虹橋",
+"name_en": "Shanghai Hongqiao International",
+"lat": 31.200000762939453,
+"lng": 121.33333587646484
+},
+{
+"id": "AIR_SHE_CN",
+"type": "airport",
+"iata": "SHE",
+"name": "沈阳桃仙国际",
+"name_traditional": "沈陽桃仙",
+"name_en": "Shenyang Taoxian International",
+"lat": 41.63330078125,
+"lng": 123.48300170898438
+},
+{
+"id": "AirSHIHEZIHU835",
+"type": "airport",
+"iata": "SHF",
+"name": "石河子花园",
+"name_traditional": "石河子花园",
+"name_en": "SHIHEZIHUAYUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnJINGZHO043",
+"type": "airport",
+"iata": "SHS",
+"name": "荆州沙市",
+"name_traditional": "荊州沙市",
+"name_en": "JINGZHOUSHASHI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnSHIJIAZ768",
+"type": "airport",
+"iata": "SJW",
+"name": "石家庄正定国际",
+"name_traditional": "石家莊正定國際",
+"name_en": "Shijiazhuang Zhengding International",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnSHANGRA555",
+"type": "airport",
+"iata": "SQD",
+"name": "上饶三清山",
+"name_traditional": "上饒三清山",
+"name_en": "SHANGRAOSANQINGSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnSANMING022",
+"type": "airport",
+"iata": "SQJ",
+"name": "三明沙县",
+"name_traditional": null,
+"name_en": "SANMINGSHAXIAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_SWA_CN",
+"type": "airport",
+"iata": "SWA",
+"name": "揭阳潮汕",
+"name_traditional": "揭陽潮汕",
+"name_en": "JIEYANGCHAOSHAN",
+"lat": 23.383333206176758,
+"lng": 116.68333435058594
+},
+{
+"id": "AirPUER760",
+"type": "airport",
+"iata": "SYM",
+"name": "普洱思茅",
+"name_traditional": "PUER SIMAO",
+"name_en": "PUER SIMAO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_SYX_CN",
+"type": "airport",
+"iata": "SYX",
+"name": "三亚凤凰国际",
+"name_traditional": "三亞鳳凰國際",
+"name_en": "Sanya Fenghuang International",
+"lat": 18.299999237060547,
+"lng": 109.41666412353516
+},
+{
+"id": "AIR_SZX_CN",
+"type": "airport",
+"iata": "SZX",
+"name": "深圳宝安国际",
+"name_traditional": "深圳寶安國際",
+"name_en": "Shenzhen Baoan International",
+"lat": 22.633333206176758,
+"lng": 113.81666564941406
+},
+{
+"id": "AIR_TAO_CN",
+"type": "airport",
+"iata": "TAO",
+"name": "青岛胶东国际",
+"name_traditional": "青岛胶东国际",
+"name_en": "QINGDAOJIAODONG",
+"lat": 36.266666412353516,
+"lng": 120.38333129882812
+},
+{
+"id": "AIR_TCG_CN",
+"type": "airport",
+"iata": "TCG",
+"name": "塔城民航",
+"name_traditional": "塔城民航",
+"name_en": "TACHENGMINHANG",
+"lat": 46.66666793823242,
+"lng": 83.33333587646484
+},
+{
+"id": "AirCnTENGCHO323",
+"type": "airport",
+"iata": "TCZ",
+"name": "腾冲驼峰",
+"name_traditional": "騰衝駝峰",
+"name_en": "TENGCHONGTUOFENG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnTONGREN237",
+"type": "airport",
+"iata": "TEN",
+"name": "铜仁凤凰",
+"name_traditional": "銅仁鳳凰",
+"name_en": "TONGRENFENGHUANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCHENGDUTI697",
+"type": "airport",
+"iata": "TFU",
+"name": "成都天府国际",
+"name_traditional": "成都天府國際",
+"name_en": "Chengdu Tianfu International",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_TGO_CN",
+"type": "airport",
+"iata": "TGO",
+"name": "通辽",
+"name_traditional": "通遼",
+"name_en": "TONGLIAO",
+"lat": 43.5,
+"lng": 122.25
+},
+{
+"id": "AirCnTIANSHU342",
+"type": "airport",
+"iata": "THQ",
+"name": "天水麦积山",
+"name_traditional": "天水麥積山",
+"name_en": "TIANSHUIMAIJISHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirTULUFANJI707",
+"type": "airport",
+"iata": "TLQ",
+"name": "吐鲁番交河",
+"name_traditional": "TULUFANJIAOHE",
+"name_en": "TULUFANJIAOHE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_TNA_CN",
+"type": "airport",
+"iata": "TNA",
+"name": "济南遥墙国际",
+"name_traditional": "濟南遙墻國際",
+"name_en": "Jinan Yaoqiang International",
+"lat": 36.71670150756836,
+"lng": 116.91699981689453
+},
+{
+"id": "AirCnSanyuan521",
+"type": "airport",
+"iata": "TNH",
+"name": "三源浦",
+"name_traditional": "三源浦",
+"name_en": "Sanyuanpu",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_TSN_CN",
+"type": "airport",
+"iata": "TSN",
+"name": "天津滨海国际",
+"name_traditional": "天津濱海國際",
+"name_en": "Tianjin Binhai International",
+"lat": 39.11669921875,
+"lng": 117.3499984741211
+},
+{
+"id": "AirCnSANNVHE280",
+"type": "airport",
+"iata": "TVS",
+"name": "唐山三女河",
+"name_traditional": "唐山三女河",
+"name_en": "SANNVHE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "CitTUMUSHUKE695",
+"type": "airport",
+"iata": "TWC",
+"name": "图木舒克唐王城",
+"name_traditional": "圖木舒克唐王城",
+"name_en": "TUMUSHUKETANGWANGCHENG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_TXN_CN",
+"type": "airport",
+"iata": "TXN",
+"name": "黄山屯溪",
+"name_traditional": "黃山屯溪",
+"name_en": "SHUANGSHANTUNXI",
+"lat": 29.733333587646484,
+"lng": 118.30000305175781
+},
+{
+"id": "AIR_TYN_CN",
+"type": "airport",
+"iata": "TYN",
+"name": "太原武宿国际",
+"name_traditional": "太原武宿",
+"name_en": "Taiyuan Wusu International",
+"lat": 37.75,
+"lng": 112.61699676513672
+},
+{
+"id": "AirCnWULANCH230",
+"type": "airport",
+"iata": "UCB",
+"name": "乌兰察布集宁",
+"name_traditional": null,
+"name_en": "WULANCHABUJINING",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_URC_CN",
+"type": "airport",
+"iata": "URC",
+"name": "乌鲁木齐天山国际",
+"name_traditional": "烏魯木齊天山國際",
+"name_en": "Wulumuqi International",
+"lat": 43.900001525878906,
+"lng": 87.4832992553711
+},
+{
+"id": "AIR_UYN_CN",
+"type": "airport",
+"iata": "UYN",
+"name": "榆林榆阳",
+"name_traditional": "榆林榆陽",
+"name_en": "YULINXISHA",
+"lat": 38.33330154418945,
+"lng": 109.48300170898438
+},
+{
+"id": "AirCnWUDANGS597",
+"type": "airport",
+"iata": "WDS",
+"name": "十堰武当山",
+"name_traditional": "十堰武當山",
+"name_en": "Shiyan Wudangshan",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirWEIFANG053",
+"type": "airport",
+"iata": "WEF",
+"name": "潍坊",
+"name_traditional": null,
+"name_en": "WEIFANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_WEH_CN",
+"type": "airport",
+"iata": "WEH",
+"name": "威海大水泊",
+"name_traditional": "威海大水泊",
+"name_en": "WEIHAIDASHUIBO",
+"lat": 37.5,
+"lng": 122.08333587646484
+},
+{
+"id": "AirSHAOYANGW823",
+"type": "airport",
+"iata": "WGN",
+"name": "邵阳武冈",
+"name_traditional": null,
+"name_en": "SHAOYANGWUGANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirWUHUXUANZ671",
+"type": "airport",
+"iata": "WHA",
+"name": "芜湖宣州",
+"name_traditional": "WUHUXUANZHOU",
+"name_en": "WUHUXUANZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirZUNYIMAOT526",
+"type": "airport",
+"iata": "WMT",
+"name": "遵义茅台",
+"name_traditional": "遵義茅台",
+"name_en": "ZUNYIMAOTAI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnWENSHAN035",
+"type": "airport",
+"iata": "WNH",
+"name": "文山砚山",
+"name_traditional": "文山硯山",
+"name_en": "WENSHANYANSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_WNZ_CN",
+"type": "airport",
+"iata": "WNZ",
+"name": "温州龙湾国际",
+"name_traditional": "溫州龍灣國際",
+"name_en": "Wenzhou Longwan International",
+"lat": 27.912500381469727,
+"lng": 120.66699981689453
+},
+{
+"id": "AirCnWUHAI067",
+"type": "airport",
+"iata": "WUA",
+"name": "乌海",
+"name_traditional": "烏海",
+"name_en": "WUHAI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_WUH_CN",
+"type": "airport",
+"iata": "WUH",
+"name": "武汉天河",
+"name_traditional": "武漢天河",
+"name_en": "WUHANTIANHE",
+"lat": 30.5,
+"lng": 114.33300018310547
+},
+{
+"id": "AirCnWUTAISH505",
+"type": "airport",
+"iata": "WUT",
+"name": "忻州五台山",
+"name_traditional": "忻州五台山",
+"name_en": "XINZHOUWUTAISHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnWUXISHU845",
+"type": "airport",
+"iata": "WUX",
+"name": "无锡苏南硕放国际",
+"name_traditional": "無錫蘇南碩放國際",
+"name_en": "Wuxi Sunanshuofang International",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnGUANGXI245",
+"type": "airport",
+"iata": "WUZ",
+"name": "梧州西江",
+"name_traditional": "梧州西江",
+"name_en": "WUZHOUXIJIANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirWANZHOUWU758",
+"type": "airport",
+"iata": "WXN",
+"name": "万州五桥",
+"name_traditional": "萬州五橋",
+"name_en": "WANZHOUWUQIAO",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirXINYANG082",
+"type": "airport",
+"iata": "XAI",
+"name": "信阳明港",
+"name_traditional": "信陽明港",
+"name_en": "XINYANGMINGGANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_XFN_CN",
+"type": "airport",
+"iata": "XFN",
+"name": "襄阳刘集",
+"name_traditional": "襄陽劉集",
+"name_en": "XIANGYANGLIUJI",
+"lat": 32.04999923706055,
+"lng": 112.01667022705078
+},
+{
+"id": "AirCnQingsha382",
+"type": "airport",
+"iata": "XIC",
+"name": "青山",
+"name_traditional": "青山",
+"name_en": "Qingshan",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_XIL_CN",
+"type": "airport",
+"iata": "XIL",
+"name": "锡林浩特",
+"name_traditional": "錫林浩特",
+"name_en": "XILINHAOTE",
+"lat": 43.96666717529297,
+"lng": 116.06666564941406
+},
+{
+"id": "AirCnXIANXIA852",
+"type": "airport",
+"iata": "XIY",
+"name": "西安咸阳国际",
+"name_traditional": "XIAN XIANYANG",
+"name_en": "XIAN XIANYANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_XMN_CN",
+"type": "airport",
+"iata": "XMN",
+"name": "厦门高崎国际",
+"name_traditional": "廈門高崎國際",
+"name_en": "Xiamen Gaoqi International",
+"lat": 24.533300399780273,
+"lng": 118.11699676513672
+},
+{
+"id": "AIR_XNN_CN",
+"type": "airport",
+"iata": "XNN",
+"name": "西宁曹家堡",
+"name_traditional": "西寧曹家堡",
+"name_en": "XININGCAOJIABAO",
+"lat": 36.54999923706055,
+"lng": 101.75
+},
+{
+"id": "AirCnDALIAN142",
+"type": "airport",
+"iata": "XNT",
+"name": "褡裢",
+"name_traditional": null,
+"name_en": "DALIAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_XUZ_CN",
+"type": "airport",
+"iata": "XUZ",
+"name": "徐州观音",
+"name_traditional": "徐州觀音",
+"name_en": "XUZHOUGUANYIN",
+"lat": 34.266666412353516,
+"lng": 117.18333435058594
+},
+{
+"id": "AirCnSANSHAY046",
+"type": "airport",
+"iata": "XYI",
+"name": "三沙永兴",
+"name_traditional": null,
+"name_en": "SANSHAYONGXING",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_YBP_CN",
+"type": "airport",
+"iata": "YBP",
+"name": "宜宾五粮液",
+"name_traditional": "宜賓五糧液",
+"name_en": "YIBINWULIANGYE",
+"lat": 28.816667556762695,
+"lng": 104.53333282470703
+},
+{
+"id": "AirMINGYUESH508",
+"type": "airport",
+"iata": "YIC",
+"name": "宜春明月山",
+"name_traditional": "宜春明月山",
+"name_en": "YICHUNMINGYUESHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnAERSHAN859",
+"type": "airport",
+"iata": "YIE",
+"name": "阿尔山伊尔施",
+"name_traditional": "阿爾山",
+"name_en": "AERSHAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_YIH_CN",
+"type": "airport",
+"iata": "YIH",
+"name": "宜昌三峡",
+"name_traditional": "宜昌三峽",
+"name_en": "YICHANGSANXIA",
+"lat": 30.700000762939453,
+"lng": 111.18299865722656
+},
+{
+"id": "AIR_YIN_CN",
+"type": "airport",
+"iata": "YIN",
+"name": "伊宁",
+"name_traditional": "伊寧",
+"name_en": "YINING",
+"lat": 43.91666793823242,
+"lng": 81.23332977294922
+},
+{
+"id": "AirCnYINGKOU832",
+"type": "airport",
+"iata": "YKH",
+"name": "营口兰旗",
+"name_traditional": "營口蘭旗",
+"name_en": "YINGKOULANQI",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCn621",
+"type": "airport",
+"iata": "YLX",
+"name": "玉林福绵",
+"name_traditional": "玉林福綿",
+"name_en": "YULINFUMIAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnCHAOYAN894",
+"type": "airport",
+"iata": "YNJ",
+"name": "朝阳川",
+"name_traditional": null,
+"name_en": "CHAOYANGCHUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_YNT_CN",
+"type": "airport",
+"iata": "YNT",
+"name": "烟台蓬莱国际",
+"name_traditional": "煙臺蓬萊國際",
+"name_en": "YANTAIPENGLAIGUOJI",
+"lat": 37.54999923706055,
+"lng": 121.33333587646484
+},
+{
+"id": "AIR_YNZ_CN",
+"type": "airport",
+"iata": "YNZ",
+"name": "盐城南洋",
+"name_traditional": "鹽城南洋",
+"name_en": "YANCHENGNANYANG",
+"lat": 33.42583465576172,
+"lng": 120.20222473144531
+},
+{
+"id": "AirCnCHAGANH356",
+"type": "airport",
+"iata": "YSQ",
+"name": "查干湖",
+"name_traditional": "查干湖",
+"name_en": "CHAGANHU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirYUTIANWAN720",
+"type": "airport",
+"iata": "YTW",
+"name": "于田万方",
+"name_traditional": "于田万方",
+"name_en": "YUTIANWANFANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirYANGZHOUT973",
+"type": "airport",
+"iata": "YTY",
+"name": "扬州泰州",
+"name_traditional": null,
+"name_en": "YANGZHOUTAIZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCn277",
+"type": "airport",
+"iata": "YUS",
+"name": "玉树巴塘",
+"name_traditional": "玉樹巴塘",
+"name_en": "YUSHUBATANG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirYUEYANGSA613",
+"type": "airport",
+"iata": "YYA",
+"name": "岳阳三荷",
+"name_traditional": null,
+"name_en": "YUEYANGSANHE",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnGANZHOU289",
+"type": "airport",
+"iata": "YZY",
+"name": "甘州",
+"name_traditional": "甘州",
+"name_en": "GANZHOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnZHAOTON399",
+"type": "airport",
+"iata": "ZAT",
+"name": "昭通",
+"name_traditional": "昭通",
+"name_en": "ZHAOTONG",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnZHAOSU191",
+"type": "airport",
+"iata": "ZFL",
+"name": "昭苏天马",
+"name_traditional": "昭蘇天馬",
+"name_en": "ZHAOSU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_ZHA_CN",
+"type": "airport",
+"iata": "ZHA",
+"name": "湛江吴川",
+"name_traditional": "湛江吳川",
+"name_en": "Zhanjiang Wuchuan",
+"lat": 21.266666412353516,
+"lng": 110.46666717529297
+},
+{
+"id": "AirCnSHAPOTO408",
+"type": "airport",
+"iata": "ZHY",
+"name": "沙坡头",
+"name_traditional": null,
+"name_en": "SHAPOTOU",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AirCnZHANGJI474",
+"type": "airport",
+"iata": "ZQZ",
+"name": "张家口宁远",
+"name_traditional": "張家口寧遠",
+"name_en": "ZHANGJIAKOUNINYUAN",
+"lat": 0,
+"lng": 0
+},
+{
+"id": "AIR_ZUH_CN",
+"type": "airport",
+"iata": "ZUH",
+"name": "珠海金湾",
+"name_traditional": "珠海三竈",
+"name_en": "ZHUHAIJINWAN",
+"lat": 22.016666412353516,
+"lng": 113.33333587646484
+},
+{
+"id": "AirCnGUIZHOU879",
+"type": "airport",
+"iata": "ZYI",
+"name": "遵义新舟",
+"name_traditional": "遵義新舟",
+"name_en": "ZUNYIXINZHOU",
+"lat": 0,
+"lng": 0
+}
+]
