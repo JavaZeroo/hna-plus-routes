@@ -1,0 +1,48 @@
+name: Watch for the next season's timetable
+on:
+  schedule:
+    - cron: '41 1 * * *'   # daily 09:41 Beijing time
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: write
+  issues: write
+concurrency:
+  group: probe-season
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Probe ten busy city pairs
+        id: probe
+        run: python scripts/probe-timetable.py --rate 12
+      - name: Refresh the data and open an issue when a new season has appeared
+        if: steps.probe.outputs.new_season == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MAX_VALID_TO: ${{ steps.probe.outputs.max_valid_to }}
+          COVERED_TO: ${{ steps.probe.outputs.covered_to }}
+        run: |
+          gh workflow run update-timetable.yml --ref main -f pairs=known
+          title="官网时刻表已出现 ${COVERED_TO} 之后的班表（最远到 ${MAX_VALID_TO}）"
+          if [ -z "$(gh issue list --label season-watch --state open --json number --jq '.[0].number')" ]; then
+            gh label create season-watch --description "timetable season watch" --color 1d76db 2>/dev/null || true
+            {
+              echo "每日探测发现海航官网「航班时刻表」已经给出 ${COVERED_TO} 之后的生效区间，最远到 ${MAX_VALID_TO}。"
+              echo
+              echo "已自动触发一次已知城市对的刷新（update-timetable 工作流）。新航季可能新增航线，建议在不受限的网络里再跑一次全量扫描："
+              echo
+              echo '    python3 scripts/crawl-official-timetable.py cities'
+              echo '    python3 scripts/crawl-official-timetable.py crawl --pairs all --workers 12'
+              echo '    python3 scripts/build-flights.py && npm run build && npm run smoke'
+              echo
+              echo "探测由 .github/workflows/probe-season.yml 每日执行；本 issue 关闭后下次发现新航季会再开一个。"
+            } > issue-body.md
+            gh issue create --title "$title" --label season-watch --body-file issue-body.md
+          fi
