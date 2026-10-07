@@ -36,6 +36,7 @@ import html
 import urllib.parse
 import urllib.request
 import http.cookiejar
+import argparse
 import threading
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
@@ -235,42 +236,58 @@ def summary():
     }, ensure_ascii=False, indent=1))
 
 
+def parse_args(argv):
+    ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
+    sub = ap.add_subparsers(dest='cmd')
+    sub.add_parser('cities'); sub.add_parser('summary')
+    c = sub.add_parser('crawl')
+    c.add_argument('--pairs', default='2025', choices=['2025', 'matrix', 'all'])
+    c.add_argument('--origin'); c.add_argument('--dest'); c.add_argument('--pair')
+    c.add_argument('--workers', type=int, default=8)
+    c.add_argument('--no-prune', action='store_true')
+    c.add_argument('--limit', type=int, default=10 ** 9)
+    c.add_argument('--delay', type=float, default=0)
+    c.add_argument('--refresh', action='store_true')
+    args = ap.parse_args(argv or ['crawl'])
+    if not args.cmd:
+        args.cmd = 'crawl'
+    return args
+
+
 def main(argv):
     OUT.mkdir(parents=True, exist_ok=True); RAW.mkdir(exist_ok=True)
-    cmd = argv[0] if argv else 'crawl'
-    if cmd == 'summary':
+    args = parse_args(argv)
+    if args.cmd == 'summary':
         return summary()
-    opts = dict(zip(argv[1::2], argv[2::2])) if cmd == 'crawl' else {}
-    flags = set(a for a in argv[1:] if a.startswith('--') and a not in opts)
     session = Session()
-    if cmd == 'cities':
+    if args.cmd == 'cities':
         cities = fetch_cities(session)
         (OUT / 'cities.json').write_text(json.dumps(cities, ensure_ascii=False, indent=0))
         print(f'{len(cities)} domestic cities saved')
         return
     cities = load_cities()
-    if '--pair' in opts:
+    if args.pair:
         by_iata = {}
         for c in cities:
             by_iata.setdefault(c['iata'], c)
-        pairs = [(by_iata[a], by_iata[b]) for a, b in (x.split('-') for x in opts['--pair'].split(','))]
+        pairs = [(by_iata[a], by_iata[b]) for a, b in (x.split('-') for x in args.pair.split(','))]
     else:
-        pairs = seed_pairs(cities, opts.get('--pairs', '2025'))
-    if '--origin' in opts:
-        pairs = [p for p in pairs if p[0]['iata'] == opts['--origin']]
-    if '--dest' in opts:
-        pairs = [p for p in pairs if p[1]['iata'] == opts['--dest']]
+        pairs = seed_pairs(cities, args.pairs)
+    if args.origin:
+        pairs = [p for p in pairs if p[0]['iata'] == args.origin]
+    if args.dest:
+        pairs = [p for p in pairs if p[1]['iata'] == args.dest]
     rows_path = OUT / 'rows.jsonl'
     done = {}
-    if '--refresh' in flags and rows_path.exists():
+    if args.refresh and rows_path.exists():
         rows_path.write_text('')  # start a fresh file so stale pairs do not linger
-    if rows_path.exists() and '--refresh' not in flags:
+    if rows_path.exists() and not args.refresh:
         for line in rows_path.read_text().splitlines():
             if line.strip():
                 rec = json.loads(line)
                 if rec['status'] in ('ok', 'none'):
                     done[(rec['origin'], rec['dest'])] = rec['status']
-    prune = '--no-prune' not in flags and '--pair' not in opts
+    prune = not args.no_prune and not args.pair
     wanted = {(o['iata'], d['iata']): (o, d) for o, d in pairs}
     # phase 1: one direction of every unordered pair (plus every one-way pair the seed list holds);
     # phase 2: the reverse direction, skipped when the forward direction had no schedule (--no-prune queries it anyway)
@@ -282,9 +299,9 @@ def main(argv):
     forward = [k for k in wanted if is_forward(k)]
     forward_set = set(forward)
     reverse_of = {k: (k[1], k[0]) for k in forward if (k[1], k[0]) in wanted and (k[1], k[0]) not in forward_set}
-    limit = int(opts.get('--limit', 10 ** 9))
-    delay = float(opts.get('--delay', 0))
-    workers = max(1, int(opts.get('--workers', 8)))
+    limit = args.limit
+    delay = args.delay
+    workers = max(1, args.workers)
     total_possible = len(wanted)
     print(f'{total_possible} pairs wanted, {sum(1 for k in wanted if k in done)} already done, {len(forward)} forward + up to {len(reverse_of)} reverse queries, {workers} workers, prune={prune}', flush=True)
     lock = threading.Lock()
@@ -345,6 +362,10 @@ def main(argv):
     out.close()
     counts['elapsed_min'] = round((time.time() - started) / 60, 1)
     print(json.dumps(counts))
+    if args.refresh and counts['queries'] == 0:
+        sys.exit('refresh requested but nothing was queried; check the pair selection')
+    if counts['ok'] == 0 and counts['queries'] >= 200:
+        sys.exit('no pair returned a schedule; the site is probably refusing requests')
 
 
 if __name__ == '__main__':
