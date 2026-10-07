@@ -186,6 +186,8 @@ def main(argv):
     tt, queried = timetable_rows(airports, cities)
     archive = archive_rows(airports)
     valid = [f for f in tt if f['valid_from'] and f['valid_to']]
+    if not valid:
+        sys.exit('no timetable rows with a validity range in data/official/timetable/rows.jsonl; refusing to build empty assets')
     coverage = {
         'fetched_from': min(r['fetched_at'][:10] for r in queried.values()), 'fetched_to': max(r['fetched_at'][:10] for r in queried.values()),
         'pairs_queried': len(queried), 'pairs_with_schedule': sum(1 for r in queried.values() if r['status'] == 'ok'),

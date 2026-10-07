@@ -12,7 +12,9 @@ Usage:
 Options for crawl:
   --pairs 2025      ordered pairs that appear in the official 2025 reference table, both directions (default)
   --pairs matrix    every ordered pair among the cities of the 2025 table (~25k)
-  --pairs all       every ordered pair among all domestic locations of the official list (~53k)
+  --pairs all       every ordered pair among all domestic locations of the official list (~59k)
+  --pairs known     pairs of the 2025 table plus every pair that had a schedule in rows.jsonl, both
+                    directions (~3k): the weekly refresh scope for rate-limited runners
   --origin HGH      only pairs leaving this IATA city code (combine with --pairs)
   --dest PEK        only pairs arriving at this IATA city code
   --pair HGH-DLC,HGH-HRB   query exactly these pairs (IATA city/airport codes) instead of the seed list
@@ -21,7 +23,8 @@ Options for crawl:
                     then; in 1188 observed routes no direction was ever served one-way only)
   --limit N         stop after N new queries
   --delay SECONDS   pause between queries per worker (default 0)
-  --refresh         start rows.jsonl afresh and re-query every pair
+  --refresh         re-query the selected pairs even if rows.jsonl already has them (the newest
+                    answer per pair is kept; rows.jsonl is compacted to one record per pair at the end)
 
 Output (data/official/timetable/):
   cities.json   official location list (Chinese name, IATA, location id)
@@ -205,7 +208,31 @@ def seed_pairs(cities, mode):
         o, d = city(r[1]), city(r[2])
         if o and d and o['iata'] != d['iata']:
             pairs.add((o['iata'], d['iata'])); pairs.add((d['iata'], o['iata']))
+    if mode == 'known':
+        for (a, b), rec in latest_records().items():
+            if rec['status'] == 'ok' and a in by_iata and b in by_iata:
+                pairs.add((a, b)); pairs.add((b, a))
     return [(by_iata[a], by_iata[b]) for a, b in sorted(pairs)]
+
+
+def latest_records():
+    """rows.jsonl as {(origin, dest): newest record}."""
+    latest = {}
+    path = OUT / 'rows.jsonl'
+    if path.exists():
+        for line in path.read_text().splitlines():
+            if line.strip():
+                rec = json.loads(line)
+                latest[(rec['origin'], rec['dest'])] = rec
+    return latest
+
+
+def compact(rows_path):
+    """Keep one record per pair (the newest), sorted, so the file stays bounded and diffs stay readable."""
+    latest = latest_records()
+    with rows_path.open('w') as f:
+        for key in sorted(latest):
+            f.write(json.dumps(latest[key], ensure_ascii=False) + '\n')
 
 
 def minutes(t):
@@ -214,10 +241,7 @@ def minutes(t):
 
 
 def summary():
-    recs = [json.loads(l) for l in (OUT / 'rows.jsonl').read_text().splitlines() if l.strip()]
-    latest = {}
-    for r in recs:  # the last answer for a pair wins
-        latest[(r['origin'], r['dest'])] = r
+    latest = latest_records()
     rows = [dict(x, origin=r['origin'], dest=r['dest']) for r in latest.values() for x in r['rows']]
     status = {}
     for r in latest.values():
@@ -244,7 +268,7 @@ def parse_args(argv):
     sub = ap.add_subparsers(dest='cmd')
     sub.add_parser('cities'); sub.add_parser('summary')
     c = sub.add_parser('crawl')
-    c.add_argument('--pairs', default='2025', choices=['2025', 'matrix', 'all'])
+    c.add_argument('--pairs', default='2025', choices=['2025', 'matrix', 'all', 'known'])
     c.add_argument('--origin'); c.add_argument('--dest'); c.add_argument('--pair')
     c.add_argument('--workers', type=int, default=8)
     c.add_argument('--no-prune', action='store_true')
@@ -281,15 +305,9 @@ def main(argv):
     if args.dest:
         pairs = [p for p in pairs if p[1]['iata'] == args.dest]
     rows_path = OUT / 'rows.jsonl'
-    done = {}
-    if args.refresh and rows_path.exists():
-        rows_path.write_text('')  # start a fresh file so stale pairs do not linger
-    if rows_path.exists() and not args.refresh:
-        for line in rows_path.read_text().splitlines():
-            if line.strip():
-                rec = json.loads(line)
-                if rec['status'] in ('ok', 'none'):
-                    done[(rec['origin'], rec['dest'])] = rec['status']
+    selected = {(o['iata'], d['iata']) for o, d in pairs}
+    # pairs already answered are skipped, unless --refresh asks to query the selected pairs again
+    done = {k: rec['status'] for k, rec in latest_records().items() if rec['status'] in ('ok', 'none') and not (args.refresh and k in selected)}
     prune = not args.no_prune and not args.pair
     wanted = {(o['iata'], d['iata']): (o, d) for o, d in pairs}
     # phase 1: one direction of every unordered pair (plus every one-way pair the seed list holds);
@@ -376,6 +394,7 @@ def main(argv):
             second.append(rk)
     phase(second)
     out.close()
+    compact(rows_path)
     counts['elapsed_min'] = round((time.time() - started) / 60, 1)
     print(json.dumps(counts))
     if args.refresh and counts['queries'] == 0:
