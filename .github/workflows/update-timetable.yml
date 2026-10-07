@@ -16,6 +16,9 @@ on:
       delay:
         description: 'seconds to pause between queries per worker'
         default: '0'
+      rate:
+        description: 'cap of queries per minute across all workers (0 = none)'
+        default: '15'
 permissions:
   contents: write
   actions: write
@@ -24,11 +27,11 @@ concurrency:
   cancel-in-progress: false
 jobs:
   crawl:
-    # new.hnair.com rate-limits GitHub-hosted runners (connections are dropped above ~20 queries/min), so the
-    # weekly schedule refreshes the known pairs with 2 workers. Set the repository variable CRAWL_RUNNER to the
+    # new.hnair.com rate-limits GitHub-hosted runners (about 165 queries, then connections are dropped for
+    # some minutes), so the weekly schedule refreshes the known pairs at 15 queries/min (about 3 hours). Set the repository variable CRAWL_RUNNER to the
     # label of a self-hosted runner (e.g. in mainland China) to crawl the full matrix (--pairs all) from there.
     runs-on: ${{ vars.CRAWL_RUNNER || 'ubuntu-latest' }}
-    timeout-minutes: 300
+    timeout-minutes: 330
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -39,7 +42,7 @@ jobs:
       - name: Refresh airport coordinates (OurAirports, for airports new to the map)
         run: python scripts/fetch-airport-codes.py
       - name: Crawl the official timetable
-        run: python scripts/crawl-official-timetable.py crawl --refresh --pairs "${{ github.event.inputs.pairs || 'known' }}" --workers "${{ github.event.inputs.workers || '2' }}" --limit "${{ github.event.inputs.limit || '0' }}" --delay "${{ github.event.inputs.delay || '0' }}"
+        run: python scripts/crawl-official-timetable.py crawl --refresh --pairs "${{ github.event.inputs.pairs || 'known' }}" --workers "${{ github.event.inputs.workers || '2' }}" --limit "${{ github.event.inputs.limit || '0' }}" --delay "${{ github.event.inputs.delay || '0' }}" --rate "${{ github.event.inputs.rate || '15' }}"
       - name: Crawl summary
         run: python scripts/crawl-official-timetable.py summary
       # a diagnostic run (limit > 0) stops here: partial data is never built or committed

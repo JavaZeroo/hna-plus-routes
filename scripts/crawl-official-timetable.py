@@ -23,6 +23,8 @@ Options for crawl:
                     then; in 1188 observed routes no direction was ever served one-way only)
   --limit N         stop after N new queries
   --delay SECONDS   pause between queries per worker (default 0)
+  --rate N          cap of N queries per minute across all workers (GitHub-hosted runners are cut off
+                    by the site above roughly 20/min for a few minutes at a time; 15 is safe)
   --refresh         re-query the selected pairs even if rows.jsonl already has them (the newest
                     answer per pair is kept; rows.jsonl is compacted to one record per pair at the end)
 
@@ -216,14 +218,17 @@ def seed_pairs(cities, mode):
 
 
 def latest_records():
-    """rows.jsonl as {(origin, dest): newest record}."""
+    """rows.jsonl as {(origin, dest): newest usable record}. A failed query (error/unknown) never
+    replaces an earlier real answer, so a flaky run cannot erase routes."""
     latest = {}
     path = OUT / 'rows.jsonl'
     if path.exists():
         for line in path.read_text().splitlines():
             if line.strip():
                 rec = json.loads(line)
-                latest[(rec['origin'], rec['dest'])] = rec
+                key = (rec['origin'], rec['dest'])
+                if rec['status'] in ('ok', 'none') or latest.get(key, rec)['status'] not in ('ok', 'none'):
+                    latest[key] = rec
     return latest
 
 
@@ -274,6 +279,7 @@ def parse_args(argv):
     c.add_argument('--no-prune', action='store_true')
     c.add_argument('--limit', type=int, default=10 ** 9)
     c.add_argument('--delay', type=float, default=0)
+    c.add_argument('--rate', type=float, default=0, help='global cap in queries per minute across all workers (0 = none)')
     c.add_argument('--refresh', action='store_true')
     args = ap.parse_args(argv or ['crawl'])
     if not args.cmd:
@@ -337,6 +343,17 @@ def main(argv):
         return local.s
 
     pause_until = [0.0]  # when the site refuses requests, every worker waits until this time
+    next_slot = [0.0]  # global pacing: the earliest time the next query may start
+
+    def take_slot():
+        if not args.rate:
+            return
+        with lock:
+            now = time.time()
+            start = max(now, next_slot[0])
+            next_slot[0] = start + 60 / args.rate
+        if start > now:
+            time.sleep(start - now)
 
     def run(key):
         o, d = wanted[key]
@@ -345,6 +362,7 @@ def main(argv):
             wait = pause_until[0] - time.time()
             if wait > 0:
                 time.sleep(wait)
+            take_slot()
             try:
                 status, rows, page = query(session(), o, d)
                 err = ''
@@ -393,6 +411,13 @@ def main(argv):
         else:  # ok, unknown or error on the forward direction: query the reverse to be safe
             second.append(rk)
     phase(second)
+    failed = [k for k, st in done.items() if st not in ('ok', 'none') and k in wanted]
+    if failed:  # one last pass for pairs the site refused, after letting it cool down
+        print(f'retrying {len(failed)} failed pairs after a 5 minute pause', flush=True)
+        time.sleep(300)
+        for k in failed:
+            done.pop(k, None)
+        phase(failed)
     out.close()
     compact(rows_path)
     counts['elapsed_min'] = round((time.time() - started) / 60, 1)
