@@ -1,15 +1,15 @@
 name: Update official timetable
 on:
   schedule:
-    - cron: '17 19 * * 1'   # Tuesdays 03:17 Beijing time
+    - cron: '17 17 * * 1'   # Tuesdays 01:17 Beijing time; the full crawl takes about 2-3 hours
   workflow_dispatch:
     inputs:
       pairs:
-        description: 'crawl scope: 2025 (pairs of the 2025 table) or matrix (all pairs among its cities)'
-        default: '2025'
-      delay:
-        description: 'seconds between queries'
-        default: '0.5'
+        description: 'crawl scope: all (every domestic city pair), matrix (cities of the 2025 table) or 2025 (its pairs only)'
+        default: 'all'
+      workers:
+        description: 'concurrent sessions'
+        default: '8'
 permissions:
   contents: write
   actions: write
@@ -28,7 +28,7 @@ jobs:
       - name: Refresh the official location list
         run: python scripts/crawl-official-timetable.py cities
       - name: Crawl the official timetable
-        run: python scripts/crawl-official-timetable.py crawl --refresh --pairs "${{ github.event.inputs.pairs || '2025' }}" --delay "${{ github.event.inputs.delay || '0.5' }}"
+        run: python scripts/crawl-official-timetable.py crawl --refresh --pairs "${{ github.event.inputs.pairs || 'all' }}" --workers "${{ github.event.inputs.workers || '8' }}"
       - name: Crawl summary
         run: python scripts/crawl-official-timetable.py summary
       - name: Rebuild assets from the official data

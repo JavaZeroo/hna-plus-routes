@@ -11,12 +11,16 @@ Usage:
 
 Options for crawl:
   --pairs 2025      ordered pairs that appear in the official 2025 reference table, both directions (default)
-  --pairs matrix    every ordered pair among the cities of the 2025 table (large)
+  --pairs matrix    every ordered pair among the cities of the 2025 table (~25k)
+  --pairs all       every ordered pair among all domestic locations of the official list (~53k)
   --origin HGH      only pairs leaving this IATA city code (combine with --pairs)
   --dest PEK        only pairs arriving at this IATA city code
   --pair HGH-DLC,HGH-HRB   query exactly these pairs (IATA city/airport codes) instead of the seed list
+  --workers N       concurrent sessions (default 8; the site answers each query in ~3 s regardless of load)
+  --no-prune        also query B→A when A→B has no schedule (by default the reverse direction is skipped
+                    then; in 1188 observed routes no direction was ever served one-way only)
   --limit N         stop after N new queries
-  --delay SECONDS   pause between queries (default 0.8)
+  --delay SECONDS   pause between queries per worker (default 0)
   --refresh         start rows.jsonl afresh and re-query every pair
 
 Output (data/official/timetable/):
@@ -32,6 +36,8 @@ import html
 import urllib.parse
 import urllib.request
 import http.cookiejar
+import threading
+from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -187,6 +193,9 @@ def seed_pairs(cities, mode):
         print('not in the official location list, skipped:', '、'.join(sorted(unresolved)), file=sys.stderr)
     if mode == 'matrix':
         return [(by_iata[a], by_iata[b]) for a in table_cities for b in table_cities if a != b]
+    if mode == 'all':  # every city, plus airports the list only knows as airports (e.g. 达州金垭)
+        codes = sorted(by_iata)
+        return [(by_iata[a], by_iata[b]) for a in codes for b in codes if a != b]
     pairs = set()
     for r in raw:
         o, d = city(r[1]), city(r[2])
@@ -252,7 +261,7 @@ def main(argv):
     if '--dest' in opts:
         pairs = [p for p in pairs if p[1]['iata'] == opts['--dest']]
     rows_path = OUT / 'rows.jsonl'
-    done = set()
+    done = {}
     if '--refresh' in flags and rows_path.exists():
         rows_path.write_text('')  # start a fresh file so stale pairs do not linger
     if rows_path.exists() and '--refresh' not in flags:
@@ -260,27 +269,81 @@ def main(argv):
             if line.strip():
                 rec = json.loads(line)
                 if rec['status'] in ('ok', 'none'):
-                    done.add((rec['origin'], rec['dest']))
-    todo = [p for p in pairs if (p[0]['iata'], p[1]['iata']) not in done]
-    limit = int(opts.get('--limit', len(todo)))
-    delay = float(opts.get('--delay', 0.8))
-    print(f'{len(pairs)} pairs, {len(done)} already done, querying {min(limit, len(todo))}')
-    counts = {'ok': 0, 'none': 0, 'unknown': 0, 'rows': 0}
-    with rows_path.open('a') as out:
-        for n, (o, d) in enumerate(todo[:limit], 1):
+                    done[(rec['origin'], rec['dest'])] = rec['status']
+    prune = '--no-prune' not in flags and '--pair' not in opts
+    wanted = {(o['iata'], d['iata']): (o, d) for o, d in pairs}
+    # phase 1: one direction of every unordered pair (plus every one-way pair the seed list holds);
+    # phase 2: the reverse direction, skipped when the forward direction had no schedule (--no-prune queries it anyway)
+    def is_forward(k):
+        rk = (k[1], k[0])
+        if not prune or rk not in wanted:
+            return True  # nothing to pair it with: always query
+        return k[0] < k[1]  # the alphabetically first direction goes first
+    forward = [k for k in wanted if is_forward(k)]
+    forward_set = set(forward)
+    reverse_of = {k: (k[1], k[0]) for k in forward if (k[1], k[0]) in wanted and (k[1], k[0]) not in forward_set}
+    limit = int(opts.get('--limit', 10 ** 9))
+    delay = float(opts.get('--delay', 0))
+    workers = max(1, int(opts.get('--workers', 8)))
+    total_possible = len(wanted)
+    print(f'{total_possible} pairs wanted, {sum(1 for k in wanted if k in done)} already done, {len(forward)} forward + up to {len(reverse_of)} reverse queries, {workers} workers, prune={prune}', flush=True)
+    lock = threading.Lock()
+    local = threading.local()
+    counts = {'ok': 0, 'none': 0, 'unknown': 0, 'error': 0, 'rows': 0, 'skipped_reverse': 0, 'queries': 0}
+    started = time.time()
+    out = rows_path.open('a')
+
+    def session():
+        if not hasattr(local, 's'):
+            local.s = Session()
+        return local.s
+
+    def run(key):
+        o, d = wanted[key]
+        status, rows, page = 'error', [], ''
+        for attempt in range(2):
             try:
-                status, rows, page = query(session, o, d)
+                status, rows, page = query(session(), o, d)
             except Exception as e:
                 status, rows, page = 'error', [], str(e)
-            key = f'{o["iata"]}-{d["iata"]}'
-            (RAW / f'{key}.html').write_text(result_block(page) or page)
-            rec = {'origin': o['iata'], 'dest': d['iata'], 'origin_name': o['name'], 'dest_name': d['name'], 'origin_id': o['id'], 'dest_id': d['id'], 'fetched_at': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'status': status, 'rows': rows}
+            if status in ('ok', 'none'):
+                break
+            local.s = Session()  # a fresh session for the retry
+            time.sleep(3)
+        rec = {'origin': o['iata'], 'dest': d['iata'], 'origin_name': o['name'], 'dest_name': d['name'], 'origin_id': o['id'], 'dest_id': d['id'],
+               'fetched_at': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'status': status, 'rows': rows}
+        with lock:
+            (RAW / f'{o["iata"]}-{d["iata"]}.html').write_text(result_block(page) or page)
             out.write(json.dumps(rec, ensure_ascii=False) + '\n'); out.flush()
-            counts[status] = counts.get(status, 0) + 1; counts['rows'] += len(rows)
-            print(f'[{n}/{min(limit, len(todo))}] {key} {o["name"]}→{d["name"]}: {status} {len(rows)} rows', flush=True)
-            if status in ('unknown', 'error'):
-                time.sleep(5); session = Session()
+            counts[status] += 1; counts['rows'] += len(rows); counts['queries'] += 1
+            n = counts['queries']
+            if n % 100 == 0 or status not in ('ok', 'none'):
+                rate = n / (time.time() - started)
+                print(f'[{n}] {o["iata"]}-{d["iata"]} {o["name"]}→{d["name"]}: {status} {len(rows)} rows · {rate*60:.0f} queries/min · ok {counts["ok"]} none {counts["none"]} unknown {counts["unknown"]} error {counts["error"]}', flush=True)
+            if counts['unknown'] + counts['error'] >= 50 and (counts['unknown'] + counts['error']) > n * 0.1:
+                sys.exit('too many failed queries; the site is probably refusing requests, stopping')
+        if delay:
             time.sleep(delay)
+        return key, status
+
+    def phase(keys):
+        todo = [k for k in keys if k not in done][: max(0, limit - counts['queries'])]
+        with ThreadPoolExecutor(workers) as ex:
+            for key, status in ex.map(run, todo):
+                done[key] = status
+
+    phase(forward)
+    second = []
+    for k, rk in reverse_of.items():
+        if rk in done:
+            continue
+        if done.get(k) == 'none':
+            counts['skipped_reverse'] += 1
+        else:  # ok, unknown or error on the forward direction: query the reverse to be safe
+            second.append(rk)
+    phase(second)
+    out.close()
+    counts['elapsed_min'] = round((time.time() - started) / 60, 1)
     print(json.dumps(counts))
 
 

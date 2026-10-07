@@ -14,7 +14,7 @@
 海航官网「[航班时刻表](https://new.hnair.com/hainanair/ibe/common/flightSchedule.do)」无需登录，按城市对返回航班号、起降时刻、班期和分段生效区间，集团各航司（HU、GS、JD、8L、PN、GX、FU、UQ、9H、Y8、CN）在同一个库里。`scripts/crawl-official-timetable.py` 直接使用页面自身的表单接口和地点数据库，不绕过任何验证。
 
 - `python scripts/crawl-official-timetable.py cities`：从官网地点库枚举国内城市与机场，写入 `data/official/timetable/cities.json`（含官网地点 ID、中文名、IATA）。
-- `python scripts/crawl-official-timetable.py crawl`：默认遍历 2025 官方参考表出现过的城市对（双向，约 1400 对），每对一次查询，结果逐行追加到 `data/official/timetable/rows.jsonl`，可中断续跑；`--pairs matrix` 遍历表内城市的全部有序组合（约 2.5 万对）；`--origin HGH`、`--dest PEK`、`--limit N`、`--refresh` 控制范围。
+- `python scripts/crawl-official-timetable.py crawl --pairs all`：遍历官网地点库全部国内城市（及仅有机场条目的地点）的有序组合，约 5.9 万对；`--pairs matrix` 只取 2025 表出现过的城市，`--pairs 2025`（默认）只取该表的城市对。结果逐行追加到 `data/official/timetable/rows.jsonl`，可中断续跑。`--workers N` 并发会话数；默认每个无序城市对先查一个方向，无班表则跳过反向，`--no-prune` 关闭；`--origin`、`--dest`、`--pair`、`--limit`、`--refresh` 控制范围。
 - `python scripts/crawl-official-timetable.py summary`：统计已抓取的记录。
 - 每条记录保留页面原文：机场对、航班号、航司 logo 代码、起飞/到达时间、周一至周日运行标记、生效时段文本，以及查询时间。查询返回的结果块原样缓存到 `data/official/timetable/raw/`（不入库）。
 - 页面提示“此航班时刻表仅供参考，如遇航班调整，请以实际执行时间为准”。时刻表不含权益卡标注；2025 官方参考表 1692 条记录的“2666 / 666/2666”标注全部可由起飞时刻推出（08:00–09:00、19:00–20:00 起飞为 2666 独享，其余权益时段为两档共有），因此权益判断在本地按官方规则进行。
@@ -22,7 +22,7 @@
 
 ## 覆盖边界
 
-官网时刻表只能按城市对查询，没有全国导出，因此默认只遍历 2025 参考表出现过的城市对；`--pairs matrix` 可查表内城市的全部组合（约 2.5 万次请求）。H5 权益卡查询接口有验签，本项目没有绕过验证、保存凭据或复制签名。“未收录”不等于没有航班；2025 历史表与当前时刻表分开统计，不混合。
+官网时刻表只能按城市对查询，没有全国导出，因此按全部国内城市的有序组合逐一查询（约 5.9 万对，反向剪枝后约 3.1 万次请求）。H5 权益卡查询接口有验签，本项目没有绕过验证、保存凭据或复制签名。“未收录”不等于没有航班；2025 历史表与当前时刻表分开统计，不混合。
 
 ## 转换与可复核记录
 
