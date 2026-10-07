@@ -10,6 +10,9 @@ on:
       workers:
         description: 'concurrent sessions'
         default: '8'
+      limit:
+        description: 'stop after this many queries (0 = no limit; for diagnostics)'
+        default: '0'
 permissions:
   contents: write
   actions: write
@@ -30,7 +33,7 @@ jobs:
       - name: Refresh airport coordinates (OurAirports, for airports new to the map)
         run: python scripts/fetch-airport-codes.py
       - name: Crawl the official timetable
-        run: python scripts/crawl-official-timetable.py crawl --refresh --pairs "${{ github.event.inputs.pairs || 'all' }}" --workers "${{ github.event.inputs.workers || '8' }}"
+        run: python scripts/crawl-official-timetable.py crawl --refresh --pairs "${{ github.event.inputs.pairs || 'all' }}" --workers "${{ github.event.inputs.workers || '8' }}" --limit "${{ github.event.inputs.limit || '0' }}"
       - name: Crawl summary
         run: python scripts/crawl-official-timetable.py summary
       - name: Rebuild assets from the official data

@@ -35,6 +35,7 @@ import time
 import html
 import urllib.parse
 import urllib.request
+import urllib.error
 import http.cookiejar
 import argparse
 import threading
@@ -75,13 +76,15 @@ class Session:
                     raise
                 time.sleep(2 ** i)
 
-    def post(self, url, fields, tries=4):
+    def post(self, url, fields, tries=2):
         data = urllib.parse.urlencode(fields).encode()
         for i in range(tries):
             try:
                 req = urllib.request.Request(url, data=data, headers={'Referer': PAGE, 'X-Requested-With': 'XMLHttpRequest', 'Content-Type': 'application/x-www-form-urlencoded'})
                 with self.opener.open(req, timeout=90) as r:
                     return r.read().decode('utf-8', 'replace')
+            except urllib.error.HTTPError:
+                raise  # 403/429/5xx: let the caller back off instead of hammering
             except Exception:
                 if i == tries - 1:
                     raise
@@ -299,7 +302,7 @@ def main(argv):
     forward = [k for k in wanted if is_forward(k)]
     forward_set = set(forward)
     reverse_of = {k: (k[1], k[0]) for k in forward if (k[1], k[0]) in wanted and (k[1], k[0]) not in forward_set}
-    limit = args.limit
+    limit = args.limit or 10 ** 9  # 0 means no limit
     delay = args.delay
     workers = max(1, args.workers)
     total_possible = len(wanted)
@@ -315,20 +318,32 @@ def main(argv):
             local.s = Session()
         return local.s
 
+    pause_until = [0.0]  # when the site refuses requests, every worker waits until this time
+
     def run(key):
         o, d = wanted[key]
-        status, rows, page = 'error', [], ''
-        for attempt in range(2):
+        status, rows, page, err = 'error', [], '', ''
+        for attempt in range(4):
+            wait = pause_until[0] - time.time()
+            if wait > 0:
+                time.sleep(wait)
             try:
                 status, rows, page = query(session(), o, d)
+                err = ''
             except Exception as e:
-                status, rows, page = 'error', [], str(e)
+                status, rows, page, err = 'error', [], '', f'{type(e).__name__}: {e}'[:200]
             if status in ('ok', 'none'):
                 break
-            local.s = Session()  # a fresh session for the retry
-            time.sleep(3)
+            # refused or broken answer: fresh session, and hold all workers back with growing pauses
+            local.s = Session() if attempt < 3 else None
+            with lock:
+                pause_until[0] = max(pause_until[0], time.time() + 15 * 2 ** attempt)
+            if local.s is None:
+                local.s = Session()
         rec = {'origin': o['iata'], 'dest': d['iata'], 'origin_name': o['name'], 'dest_name': d['name'], 'origin_id': o['id'], 'dest_id': d['id'],
                'fetched_at': datetime.now(timezone.utc).isoformat(timespec='seconds'), 'status': status, 'rows': rows}
+        if err:
+            rec['error'] = err
         with lock:
             (RAW / f'{o["iata"]}-{d["iata"]}.html').write_text(result_block(page) or page)
             out.write(json.dumps(rec, ensure_ascii=False) + '\n'); out.flush()
@@ -336,7 +351,8 @@ def main(argv):
             n = counts['queries']
             if n % 100 == 0 or status not in ('ok', 'none'):
                 rate = n / (time.time() - started)
-                print(f'[{n}] {o["iata"]}-{d["iata"]} {o["name"]}→{d["name"]}: {status} {len(rows)} rows · {rate*60:.0f} queries/min · ok {counts["ok"]} none {counts["none"]} unknown {counts["unknown"]} error {counts["error"]}', flush=True)
+                detail = f' · {err}' if err else (f' · page {len(page)} chars, title {re.search(r"<title>(.*?)</title>", page, re.S).group(1).strip()[:60] if re.search(r"<title>(.*?)</title>", page, re.S) else "?"}' if status == 'unknown' else '')
+                print(f'[{n}] {o["iata"]}-{d["iata"]} {o["name"]}→{d["name"]}: {status} {len(rows)} rows · {rate*60:.0f} queries/min · ok {counts["ok"]} none {counts["none"]} unknown {counts["unknown"]} error {counts["error"]}{detail}', flush=True)
             if counts['unknown'] + counts['error'] >= 50 and (counts['unknown'] + counts['error']) > n * 0.1:
                 sys.exit('too many failed queries; the site is probably refusing requests, stopping')
         if delay:
