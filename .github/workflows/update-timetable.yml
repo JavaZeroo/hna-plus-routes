@@ -13,6 +13,9 @@ on:
       limit:
         description: 'stop after this many queries (0 = no limit; for diagnostics)'
         default: '0'
+      delay:
+        description: 'seconds to pause between queries per worker'
+        default: '0'
 permissions:
   contents: write
   actions: write
@@ -21,7 +24,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   crawl:
-    runs-on: ubuntu-latest
+    # new.hnair.com cuts GitHub-hosted runners off after roughly 65 requests; set the repository
+    # variable CRAWL_RUNNER to the label of a self-hosted runner (e.g. one in mainland China) to crawl from there
+    runs-on: ${{ vars.CRAWL_RUNNER || 'ubuntu-latest' }}
     timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
@@ -33,7 +38,7 @@ jobs:
       - name: Refresh airport coordinates (OurAirports, for airports new to the map)
         run: python scripts/fetch-airport-codes.py
       - name: Crawl the official timetable
-        run: python scripts/crawl-official-timetable.py crawl --refresh --pairs "${{ github.event.inputs.pairs || 'all' }}" --workers "${{ github.event.inputs.workers || '8' }}" --limit "${{ github.event.inputs.limit || '0' }}"
+        run: python scripts/crawl-official-timetable.py crawl --refresh --pairs "${{ github.event.inputs.pairs || 'all' }}" --workers "${{ github.event.inputs.workers || '8' }}" --limit "${{ github.event.inputs.limit || '0' }}" --delay "${{ github.event.inputs.delay || '0' }}"
       - name: Crawl summary
         run: python scripts/crawl-official-timetable.py summary
       - name: Rebuild assets from the official data
