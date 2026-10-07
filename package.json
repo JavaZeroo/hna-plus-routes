@@ -6,7 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "smoke": "node scripts/smoke-test.mjs dist/index.html",
+    "data": "python3 scripts/build-flights.py",
+    "data:check": "python3 scripts/build-flights.py --check"
   },
   "dependencies": {
     "react": "19.2.3",
@@ -14,6 +17,7 @@
   },
   "devDependencies": {
     "vite": "8.0.8",
-    "vite-plugin-singlefile": "2.3.3"
+    "vite-plugin-singlefile": "2.3.3",
+    "playwright": "1.56.1"
   }
 }

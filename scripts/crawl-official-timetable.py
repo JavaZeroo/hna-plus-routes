@@ -17,7 +17,7 @@ Options for crawl:
   --pair HGH-DLC,HGH-HRB   query exactly these pairs (IATA city/airport codes) instead of the seed list
   --limit N         stop after N new queries
   --delay SECONDS   pause between queries (default 0.8)
-  --refresh         re-query pairs that already have a result in rows.jsonl
+  --refresh         start rows.jsonl afresh and re-query every pair
 
 Output (data/official/timetable/):
   cities.json   official location list (Chinese name, IATA, location id)
@@ -253,6 +253,8 @@ def main(argv):
         pairs = [p for p in pairs if p[1]['iata'] == opts['--dest']]
     rows_path = OUT / 'rows.jsonl'
     done = set()
+    if '--refresh' in flags and rows_path.exists():
+        rows_path.write_text('')  # start a fresh file so stale pairs do not linger
     if rows_path.exists() and '--refresh' not in flags:
         for line in rows_path.read_text().splitlines():
             if line.strip():

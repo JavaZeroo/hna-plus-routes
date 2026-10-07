@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+    branches-ignore: [gh-pages]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Assets match the committed official data
+        run: python scripts/build-flights.py --check
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Install Chromium for the smoke test
+        run: npx playwright install --with-deps chromium
+      - name: Smoke test the built page
+        run: node scripts/smoke-test.mjs dist/index.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: dist/index.html

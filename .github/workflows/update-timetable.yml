@@ -1,0 +1,62 @@
+name: Update official timetable
+on:
+  schedule:
+    - cron: '17 19 * * 1'   # Tuesdays 03:17 Beijing time
+  workflow_dispatch:
+    inputs:
+      pairs:
+        description: 'crawl scope: 2025 (pairs of the 2025 table) or matrix (all pairs among its cities)'
+        default: '2025'
+      delay:
+        description: 'seconds between queries'
+        default: '0.5'
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: update-timetable
+  cancel-in-progress: false
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh the official location list
+        run: python scripts/crawl-official-timetable.py cities
+      - name: Crawl the official timetable
+        run: python scripts/crawl-official-timetable.py crawl --refresh --pairs "${{ github.event.inputs.pairs || '2025' }}" --delay "${{ github.event.inputs.delay || '0.5' }}"
+      - name: Crawl summary
+        run: python scripts/crawl-official-timetable.py summary
+      - name: Rebuild assets from the official data
+        run: python scripts/build-flights.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npx playwright install --with-deps chromium
+      - run: node scripts/smoke-test.mjs dist/index.html
+      - name: Commit and push the new data
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/official/timetable/cities.json data/official/timetable/rows.jsonl src/assets/flights.json src/assets/coverage.json src/assets/airports.json
+          if git diff --cached --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "no data change"
+          else
+            git commit -m "Update official timetable data ($(date -u +%Y-%m-%d))"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Deploy the refreshed site
+        if: steps.commit.outputs.changed == 'true' && github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
