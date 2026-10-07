@@ -3,6 +3,8 @@
 Sources (both official, both kept verbatim in data/official/):
   data/official/timetable/rows.jsonl      official timetable crawl (scripts/crawl-official-timetable.py)
   data/official/official-2025-raw.json    official 2025 PLUS reference table (historical)
+Map positions: data/airports/map-airports.json (curated) plus data/airports/ourairports-cn.csv for
+airports the timetable names that the curated table lacks.
 
 The PLUS tier is derived from the departure time only, following the official rules
 (2666: departures 19:00-09:00 Beijing time; 2666-exclusive: 08:00-09:00 and 19:00-20:00).
@@ -26,14 +28,14 @@ CARRIERS = {'HU': '海南航空', 'CN': '大新华航空', 'JD': '首都航空',
 # the 2025 table names some airports instead of cities
 TABLE_ALIASES = {'北京首都': 'PEK', '北京大兴': 'PKX', '上海虹桥': 'SHA', '上海浦东': 'PVG', '成都天府': 'TFU', '重庆万州': 'WXN', '重庆江北': 'CKG', '大连周水子': 'DLC', '茅台': 'WMT', '那拉提': 'NLT', '香格里拉': 'DIG'}
 # airports the timetable names that the map table does not have yet (name, city, province, lat, lon)
-EXTRA_AIRPORTS = {'RUG': ('瑞金机场', '瑞金', '江西', 25.8794, 116.0386)}
+EXTRA_AIRPORTS = {'RUG': ('瑞金机场', '瑞金', '江西', 25.8794, 116.0386), 'LTJ': ('巴音郭楞轮台机场', '轮台', '新疆', 41.7833, 84.25), 'XYI': ('三沙永兴机场', '三沙', '海南', 16.8333, 112.3333)}
 # ISO 3166-2:CN region codes (as used by OurAirports) to the province names of airports.json
 PROVINCES = {'11': '北京', '12': '天津', '13': '河北', '14': '山西', '15': '内蒙古', '21': '辽宁', '22': '吉林', '23': '黑龙江', '31': '上海', '32': '江苏', '33': '浙江', '34': '安徽', '35': '福建', '36': '江西', '37': '山东',
              '41': '河南', '42': '湖北', '43': '湖南', '44': '广东', '45': '广西', '46': '海南', '50': '重庆', '51': '四川', '52': '贵州', '53': '云南', '54': '西藏', '61': '陕西', '62': '甘肃', '63': '青海', '64': '宁夏', '65': '新疆',
              'BJ': '北京', 'TJ': '天津', 'HE': '河北', 'SX': '山西', 'NM': '内蒙古', 'LN': '辽宁', 'JL': '吉林', 'HL': '黑龙江', 'SH': '上海', 'JS': '江苏', 'ZJ': '浙江', 'AH': '安徽', 'FJ': '福建', 'JX': '江西', 'SD': '山东',
              'HA': '河南', 'HB': '湖北', 'HN': '湖南', 'GD': '广东', 'GX': '广西', 'HI': '海南', 'CQ': '重庆', 'SC': '四川', 'GZ': '贵州', 'YN': '云南', 'XZ': '西藏', 'SN': '陕西', 'GS': '甘肃', 'QH': '青海', 'NX': '宁夏', 'XJ': '新疆'}
 # airport-name keywords that pick one airport in a multi-airport city
-AIRPORT_KEYWORDS = {'首都': 'PEK', '大兴': 'PKX', '虹桥': 'SHA', '浦东': 'PVG', '双流': 'CTU', '天府': 'TFU', '新舟': 'ZYI', '茅台': 'WMT', '瑞金': 'RUG', '黄金': 'KOW'}
+AIRPORT_KEYWORDS = {'首都': 'PEK', '大兴': 'PKX', '虹桥': 'SHA', '浦东': 'PVG', '双流': 'CTU', '天府': 'TFU', '新舟': 'ZYI', '茅台': 'WMT', '瑞金': 'RUG', '黄金': 'KOW', '腾湖': 'BFY'}
 
 
 def minutes(hhmm):
@@ -46,7 +48,9 @@ def exclusive(dep):
 
 
 def load_airports():
-    airports = json.loads((ASSETS / 'airports.json').read_text())
+    # the curated base table lives in data/; src/assets/airports.json is generated from it,
+    # so a rebuild never depends on its own previous output
+    airports = json.loads((DATA.parent / 'airports/map-airports.json').read_text())
     for code, (name, city, province, lat, lon) in EXTRA_AIRPORTS.items():
         airports.setdefault(code, dict(iata=code, city=city, province=province, name=name, lat=lat, lon=lon))
     return airports
@@ -115,8 +119,11 @@ def airport_resolver(airports, cities):
         if added:
             cache[key] = added
             return added
-        sys.exit(f'cannot place airport "{airport_name}" (query city {city_code}); add it to EXTRA_AIRPORTS or refresh data/airports/ourairports-cn.csv')
+        unresolved.add((city_code, airport_name))
+        return None
 
+    unresolved = set()
+    resolve.unresolved = unresolved
     return resolve
 
 
@@ -139,6 +146,8 @@ def timetable_rows(airports, cities):
         for x in rec['rows']:
             o_name, d_name = [s.strip() for s in x['airport_pair'].split(' - ', 1)]
             o, d = resolve(rec['origin'], o_name), resolve(rec['dest'], d_name)
+            if not o or not d:
+                continue
             dep, arr = x['dep_time'].replace(':', ''), x['arr_time'].replace(':', '')
             dates = re.findall(r'\d{4}\.\d{2}\.\d{2}', x['validity'] or '')  # "YYYY.MM.DD-YYYY.MM.DD"
             start, end = [d.replace('.', '-') for d in dates[:2]] if len(dates) == 2 else (None, None)
@@ -150,6 +159,8 @@ def timetable_rows(airports, cities):
             f.update(valid_from=start, valid_to=end, fetched_at=rec['fetched_at'][:10], query_pair=f"{rec['origin_name']}→{rec['dest_name']}", official_airport_pair=x['airport_pair'],
                      note=f"官网航班时刻表原文：{x['airport_pair']} {x['flight_no']} {x['dep_time']}-{x['arr_time']} 班期{x['days']} 生效{x['validity']}；查询条件 {rec['origin_name']}→{rec['dest_name']}，抓取于 {rec['fetched_at'][:10]}。")
             rows.append(f)
+    if resolve.unresolved:
+        sys.exit('cannot place these airports; add them to EXTRA_AIRPORTS or refresh data/airports/ourairports-cn.csv: ' + ', '.join(f'{n} (query city {c})' for c, n in sorted(resolve.unresolved)))
     rows.sort(key=lambda f: (f['origin_city'], f['dest_city'], f['dep_time'], f['flight_no'], f['valid_from'] or ''))
     for n, f in enumerate(rows, 1):
         f['id'] = f'tt-{n}'

@@ -35,6 +35,6 @@
 
 ## 地图辅助资料与许可
 
-机场坐标来自 [datasets/airport-codes](https://github.com/datasets/airport-codes)，源于 OurAirports，PDDL；`scripts/fetch-airport-codes.py` 把其中有 IATA 代码的中国机场存为 `data/airports/ourairports-cn.csv`，`build-flights.py` 只在时刻表出现地图表没有的机场时用它补坐标和省份（省份按 ISO 3166-2 地区码映射），机场中文名取自官网。机场代码与坐标仅用于地图定位。中国省界来自 [DataV.GeoAtlas](https://datav.aliyun.com/portal/school/atlas/area_selector)，服务条款适用。这些辅助资料不决定任何航线或班表。
+地图机场表 `data/airports/map-airports.json` 是整理过的基础表（`src/assets/airports.json` 由它生成，不手改）。机场坐标来自 [datasets/airport-codes](https://github.com/datasets/airport-codes)，源于 OurAirports，PDDL；`scripts/fetch-airport-codes.py` 把其中有 IATA 代码的中国机场存为 `data/airports/ourairports-cn.csv`，`build-flights.py` 只在时刻表出现地图表没有的机场时用它补坐标和省份（省份按 ISO 3166-2 地区码映射），机场中文名取自官网。机场代码与坐标仅用于地图定位。中国省界来自 [DataV.GeoAtlas](https://datav.aliyun.com/portal/school/atlas/area_selector)，服务条款适用。这些辅助资料不决定任何航线或班表。
 
 本项目原创代码 MIT；MIT 不覆盖官方内容及第三方底图。React / React DOM、Vite、vite-plugin-singlefile 等依赖许可随各包提供。构建文件内置全部数据，可离线使用；不会自动刷新。
