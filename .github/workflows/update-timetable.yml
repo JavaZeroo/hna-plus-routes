@@ -27,6 +27,8 @@ jobs:
           python-version: '3.12'
       - name: Refresh the official location list
         run: python scripts/crawl-official-timetable.py cities
+      - name: Refresh airport coordinates (OurAirports, for airports new to the map)
+        run: python scripts/fetch-airport-codes.py
       - name: Crawl the official timetable
         run: python scripts/crawl-official-timetable.py crawl --refresh --pairs "${{ github.event.inputs.pairs || 'all' }}" --workers "${{ github.event.inputs.workers || '8' }}"
       - name: Crawl summary
@@ -46,7 +48,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/official/timetable/cities.json data/official/timetable/rows.jsonl src/assets/flights.json src/assets/coverage.json src/assets/airports.json
+          git add data/official/timetable/cities.json data/official/timetable/rows.jsonl data/airports/ourairports-cn.csv src/assets/flights.json src/assets/coverage.json src/assets/airports.json
           if git diff --cached --quiet; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "no data change"

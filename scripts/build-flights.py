@@ -13,6 +13,7 @@ Usage:
   python scripts/build-flights.py --check    # exit 1 when the assets differ from the data (CI)
   python scripts/build-flights.py --force    # accept a large drop in row count
 """
+import csv
 import json
 import re
 import sys
@@ -26,6 +27,11 @@ CARRIERS = {'HU': '海南航空', 'CN': '大新华航空', 'JD': '首都航空',
 TABLE_ALIASES = {'北京首都': 'PEK', '北京大兴': 'PKX', '上海虹桥': 'SHA', '上海浦东': 'PVG', '成都天府': 'TFU', '重庆万州': 'WXN', '重庆江北': 'CKG', '大连周水子': 'DLC', '茅台': 'WMT', '那拉提': 'NLT', '香格里拉': 'DIG'}
 # airports the timetable names that the map table does not have yet (name, city, province, lat, lon)
 EXTRA_AIRPORTS = {'RUG': ('瑞金机场', '瑞金', '江西', 25.8794, 116.0386)}
+# ISO 3166-2:CN region codes (as used by OurAirports) to the province names of airports.json
+PROVINCES = {'11': '北京', '12': '天津', '13': '河北', '14': '山西', '15': '内蒙古', '21': '辽宁', '22': '吉林', '23': '黑龙江', '31': '上海', '32': '江苏', '33': '浙江', '34': '安徽', '35': '福建', '36': '江西', '37': '山东',
+             '41': '河南', '42': '湖北', '43': '湖南', '44': '广东', '45': '广西', '46': '海南', '50': '重庆', '51': '四川', '52': '贵州', '53': '云南', '54': '西藏', '61': '陕西', '62': '甘肃', '63': '青海', '64': '宁夏', '65': '新疆',
+             'BJ': '北京', 'TJ': '天津', 'HE': '河北', 'SX': '山西', 'NM': '内蒙古', 'LN': '辽宁', 'JL': '吉林', 'HL': '黑龙江', 'SH': '上海', 'JS': '江苏', 'ZJ': '浙江', 'AH': '安徽', 'FJ': '福建', 'JX': '江西', 'SD': '山东',
+             'HA': '河南', 'HB': '湖北', 'HN': '湖南', 'GD': '广东', 'GX': '广西', 'HI': '海南', 'CQ': '重庆', 'SC': '四川', 'GZ': '贵州', 'YN': '云南', 'XZ': '西藏', 'SN': '陕西', 'GS': '甘肃', 'QH': '青海', 'NX': '宁夏', 'XJ': '新疆'}
 # airport-name keywords that pick one airport in a multi-airport city
 AIRPORT_KEYWORDS = {'首都': 'PEK', '大兴': 'PKX', '虹桥': 'SHA', '浦东': 'PVG', '双流': 'CTU', '天府': 'TFU', '新舟': 'ZYI', '茅台': 'WMT', '瑞金': 'RUG', '黄金': 'KOW'}
 
@@ -46,13 +52,40 @@ def load_airports():
     return airports
 
 
+def load_ourairports():
+    """Coordinates and province for airports the map table does not know yet (OurAirports, PDDL)."""
+    path = ROOT / 'data/airports/ourairports-cn.csv'
+    table = {}
+    if path.exists():
+        for r in csv.DictReader(path.open(encoding='utf-8')):
+            lat, lon = map(float, r['coordinates'].split(','))
+            if abs(lat) > 60:  # older dumps stored "lon, lat"
+                lat, lon = lon, lat
+            table.setdefault(r['iata_code'], dict(lat=lat, lon=lon, province=PROVINCES.get(r['iso_region'].split('-')[-1]), name_en=r['name']))
+    return table
+
+
 def airport_resolver(airports, cities):
     """Map (city code from the query, airport name from the result) to an entry of airports.json."""
     by_city_code = {}
     for c in cities:
         by_city_code.setdefault(c['iata'], c)
+    official_airports = [c for c in cities if c['type'] == 'airport']
+    ourairports = load_ourairports()
     strip = lambda s: re.sub(r'国际|机场|民航', '', s)
     cache = {}
+
+    def add_airport(city_code, airport_name):
+        """Create a map entry for an airport only the timetable names: IATA from the official location
+        list, coordinates and province from OurAirports, Chinese names from the official data."""
+        hit = next((a for a in official_airports if strip(a['name']) and strip(a['name']) in airport_name), None)
+        code = hit['iata'] if hit else city_code
+        geo = ourairports.get(code)
+        if not geo or not geo['province']:
+            return None
+        city = by_city_code.get(city_code, {}).get('name') or by_city_code.get(code, {}).get('name') or airport_name
+        airports[code] = dict(iata=code, city=city, province=geo['province'], name=airport_name, lat=geo['lat'], lon=geo['lon'])
+        return airports[code]
 
     def resolve(city_code, airport_name):
         key = (city_code, airport_name)
@@ -78,7 +111,11 @@ def airport_resolver(airports, cities):
         if city_code in airports:
             cache[key] = airports[city_code]
             return airports[city_code]
-        sys.exit(f'cannot place airport "{airport_name}" (query city {city_code}); add it to EXTRA_AIRPORTS or AIRPORT_KEYWORDS')
+        added = add_airport(city_code, airport_name)
+        if added:
+            cache[key] = added
+            return added
+        sys.exit(f'cannot place airport "{airport_name}" (query city {city_code}); add it to EXTRA_AIRPORTS or refresh data/airports/ourairports-cn.csv')
 
     return resolve
 
